@@ -5,8 +5,5 @@ Networking
 .. toctree::
   :titlesonly:
 
-  NETWORKING/VPNS/IPSEC
-  NETWORKING/VPNS/SSL
-
-
-
+  NETWORKING/VPNS/LAYER2
+  NETWORKING/VPNS/LAYER3
