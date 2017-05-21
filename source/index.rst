@@ -7,15 +7,14 @@ Welcome to Grumpy Networkers Journal's documentation!
 =====================================================
 
 .. toctree::
+   :titlesonly:
    :numbered:
    :maxdepth: 2
    :caption: Contents:
 
-   IPSEC
-   S2SVPNIOS
-   S2SVPNASA
-   SSLVPN
-   SSLVPNIOS
+   NETWORKING
+   DOCUMENTATION
+   SECURITY
    glossary
    external_references
 
