@@ -3,6 +3,8 @@ IPSEC VPNs
 ##########
 
 .. toctree::
+  :titlesonly:
+ 
   IPSEC/IPSEC_FUNDAMENTALS
   IPSEC/S2SVPNASA
   IPSEC/S2SVPNIOS
