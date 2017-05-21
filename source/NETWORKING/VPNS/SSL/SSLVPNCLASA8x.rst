@@ -49,7 +49,7 @@ Generate Encryption Key
 
 ::
 
-  crypto key generate rsa modules <bit-size>
+  crypto key generate rsa modulus <bit-size>
 
 
 Enable Webvpn on the user facing interface
