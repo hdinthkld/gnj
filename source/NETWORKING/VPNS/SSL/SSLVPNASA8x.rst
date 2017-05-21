@@ -56,7 +56,6 @@ Enable Webvpn on the user facing interface
 ------------------------------------------
 
 ::
-
   webvpn
     enable <if-name>
 
@@ -65,7 +64,6 @@ Create usernames (if required)
 ------------------------------
 
 ::
-
   username <username> <password>
 
 
@@ -73,7 +71,6 @@ Create Port forwarding rules
 ----------------------------
 
 ::
-
   webvpn
     port-forward <pf-list-name> <local-port> <remote-ip> <remote-port>
 
@@ -111,22 +108,7 @@ Define the connection profile
 Verification
 ============
 
-Client Verification
--------------------
 
-* Login as the user with a web browser
+.. todo::
 
-ASA Verification
-----------------
-
-* Verify the number of users connected
-
-::
-
-  show vpn-sessiondb
-
-* View details for a specific user
-
-::
-
-  show vpn-sessiondb user <username> detail
+   Auto-Start of Port Forwarding
