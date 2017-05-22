@@ -5,6 +5,18 @@ Dynamic Multipoint VPN Troubleshooting
 Introduction
 ============
 
+Troubleshooting Command
+-----------------------
+
+.. rubric:: Debugging commands
+
+::
+
+  debug nhrp
+
+
+
+
 Possible Scenarios
 -------------------
 

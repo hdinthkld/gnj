@@ -127,6 +127,7 @@ Limitations
 * Supported on IOS devices only (not supported on ASA/PIX)
 * Works in IPSec transport mode
 * Failure of a single hub will cause the entire DMVPN to eventually fail
+* When running behind a NAT device, IPSEC Tunnel mode should be used not Transport mode
 
 Advantages
 ==========

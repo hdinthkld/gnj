@@ -90,9 +90,15 @@ Single Hub with Pre-Shared Key Authentication
     no ip next-hop-self eigrp <as>
 
     ! If using OSPF routing
-    ! TODO
+    ! Define the DMVPN network as a broadcast network type
+    ip ospf network broadcast
+    ip ospf priority 0
+
+    ! Enable DMVPN Phase 3
+    ip nhrp shortcut
 
 .. rubric:: Step 7a: Configure Dynamic Routing (EIGRP)
+
 
 ::
 
@@ -102,6 +108,11 @@ Single Hub with Pre-Shared Key Authentication
     network <lan-subnet> <lan-mask>
 
 .. rubric:: Step 7b: Configure Dynamic Routing (OSPF)
+
+.. caution:: When using OSPF spoke devices should not become the DR or BDR,
+          therefore set their priority to 0 so they do not take part in the
+          election process
+
 
 .. todo:: Document OSPF configuration
 
@@ -114,3 +125,110 @@ Additional Steps
 
 #. Spokes should be configured with static mapping of both hubs
 #. Spokes should be configured with both hubs as their NHS servers
+
+
+Single Hub with RSA Authentication
+==================================
+
+.. rubric:: Step 1: Configure the trusted CA
+
+::
+
+  crypto ca trustpoint <ca-name>
+    enrollment url <url>
+
+
+.. rubric:: Step 2: Authenticate the CA Server
+
+::
+  crypto ca authenticate <ca-name>
+
+.. rubric:: Step 3: Enroll with the CA Server
+
+::
+  crypto ca enroll <ca-name>
+
+
+.. rubric:: Step 3: Define the Phase 1 Policy
+
+::
+  crypto isakmp policy <priority>
+    authentication rsa-sig
+    encryption
+    hash
+    group
+    lifetime
+
+Remaining steps are the same as with Pre-Shared Key Authentication
+
+Single Hub DMVPN with IKEv2
+==================================
+
+.. rubric:: Step 1: Configure the Phase 1 Proposal
+
+::
+
+  crypto ikev2 proposal <priority>
+    encryption <encryption-algorithm>
+    group <dh-group>
+    integrity <integrity-algorithm>
+
+
+.. rubric:: Step 2: Configure the Phase 2 Policy
+
+::
+
+  crypto ipsec transform-set <name> <enc> <hash>
+    mode transport
+
+.. rubric:: Step 3: Configure Authentication Details
+
+::
+
+  crypto ikev2 keyring <name>
+    peer any
+      address 0.0.0.0
+      pre-shared-key <psk>
+
+.. rubric:: Step 4: Configure IKEv2 Profile
+
+::
+
+  crypto ikev2 profile <name>
+    match identity remote address <ip-or-wildcard>
+    auth local pre-share
+    auth remote pre-share
+
+
+.. rubric:: Step 4: Configure IPSec Profile
+
+::
+
+  crypto ipsec profile <name>
+    set transform-set <name>
+    set ikev2-profile <name>
+
+.. rubric:: Step 4: Configure Tunnel Interface
+
+Configure Tunnel interface the same as in IKEv1 configuration
+
+
+Single Hub DMVPN with IPv6
+==========================
+
+* Confgure 'ipv6 address' on LAN and Tunnel Interfaces
+* All the IPv6 equivilent NHRP commands are the same as IPv4, just replace 'ip'
+  with 'ipv6'
+* If using IPv6 over the DMVPN but IPv4 on public interface, the IPv6 address
+  should be specified as the private addresss and the public IPv4 address as
+  the NBMA address
+* For EIGRP, configure the tunnel interface as part of EIGRP process with
+  'ipv6 eigrp <process-id>'
+
+
+Dual Hub with Dual DMVPN
+========================
+
+* Configure multiple tunnel interfaces (one per DMVPN cloud)
+  * Specify unique tunnel key (1)
+  * Specify unique NHRP network ID (1)

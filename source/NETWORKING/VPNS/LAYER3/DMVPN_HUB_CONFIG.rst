@@ -93,9 +93,22 @@ Single Hub with Pre-Shared Key Authentication
     ! received on.
     no ip split-horizon eigrp <as>
 
-.. rubric:: Step 5b:: Configure Dynamic Routing (OSPF)
+    ! Enable DMVPN Phase 3
+    ip nhrp redirect
 
-.. todo:: Complete example configruation for OSPF
+.. rubric:: Step 5b: Configure Dynamic Routing (OSPF)
+
+! If using OSPF routing
+! Define the DMVPN network as a broadcast network type
+ip ospf network broadcast
+! Set the Primary Hub to have the highest OSPF Priority
+ip ospf priority <priority>
+! All the GRE tunnel interface to participate in OSPF
+ip ospf <process-id> area <area-id>
+
+.. todo:: Complete example configuration for OSPF
+    router ospf <process-id>
+
 
 
 Dual Hub with Pre-Shared Key Authentication
@@ -104,7 +117,70 @@ Dual Hub with Pre-Shared Key Authentication
 Additional Steps
 ----------------
 
-#. On Secondary Hub
+.. rubric:: Configure Secondary Hub
 
-  #. Define static mapping to primary hub (make the secondery hub an client to the primary hub)
-  #. Define NHS server of primary hub
+#. Same Configuration as Primary Hub
+#. Define static mapping to primary hub (make the secondery hub an client to the primary hub)
+#. Define NHS server of primary hub
+
+
+Using DMVPN with Key Ring and DMVPN Profile
+===========================================
+
+Complete steps as per the previous configuration with the following differences:
+
+.. rubric:: Step 1: Define the PSKs
+
+::
+  crypto keyring <kr-name>
+    pre-shared-key addresss <ip> key <psk>
+
+.. rubric:: Step 2: Define the ISAKMP Profile
+
+::
+  crypto isakmp profile <isakmp-profile-name>
+    match identity address <ip-or-wildcard>
+    keyring <kr-name>
+
+
+.. rubric:: Step 3: Define the IPSEC Profile
+
+::
+  crypto ipsec profile <ipsec-profile-name>
+    set transform-set <ts-name>
+    set isakmp-profile <isakmp-profile-name>
+
+
+Single Hub with RSA Authentication
+==================================
+
+.. rubric:: Step 1: Configure the trusted CA
+
+::
+
+  crypto ca trustpoint <ca-name>
+    enrollment url <url>
+
+
+.. rubric:: Step 2: Authenticate the CA Server
+
+::
+  crypto ca authenticate <ca-name>
+
+.. rubric:: Step 3: Enroll with the CA Server
+
+::
+  crypto ca enroll <ca-name>
+
+
+.. rubric:: Step 3: Define the Phase 1 Policy
+
+::
+  crypto isakmp policy <priority>
+    authentication rsa-sig
+    encryption
+    hash
+    group
+    lifetime
+
+Remaining steps are the same as with Pre-Shared Key Authentication
