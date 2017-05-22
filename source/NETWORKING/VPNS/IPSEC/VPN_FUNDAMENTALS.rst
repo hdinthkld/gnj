@@ -295,48 +295,7 @@ PKI Message Echange Process
 * CA will sign the certificate request with it's private key, validating it origin in form of a certificate
 * Host will save certificate and use as the public key portion in communicating with other peers
 
-Setup an IOS Router to be a certificate issuring (CA) server
--------------------------------------------------------------
 
-Minimal configuration steps
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Configure interface on which to service request
-
-Configure approrpiate static/dynamic routing to reach requesting devices
-
-Ensure time on the device is correct (NTP recommended)
-
-Generate the public/private keys::
-
-  crypto key generate rsa general-keys exporting label <CA-LABEL> modulus 2048
-
-Export the keys (Public and private)::
-
-  crypto key export rsa <label-name> pem url nvram: <encryption> <key>
-
-Enable HTTP Server for SCEP requests::
-
-  ip http server
-
-Create CA Server::
-
-  crypto pki server <db-name>
-  database level minimum
-  database url nvram:
-  issuer-name <cn=xxxxx, c=xxxxx>
-  lifetime certificate <days>
-  grant [auto]
-  no shutdown
-
-Enter password to protect private key
-
-
-Verification Steps
-##################
-* Verify server is running
-  ::
-  show crypto pki server
 
 AH
 ===
