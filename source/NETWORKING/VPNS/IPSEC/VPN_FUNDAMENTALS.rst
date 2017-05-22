@@ -13,7 +13,7 @@ IPSec Introduction
 
 VPN Protocols
 =============
-VPNs can run over a number of different protocols however certain protocols are best used in certain types of environments. 
+VPNs can run over a number of different protocols however certain protocols are best used in certain types of environments.
 
 The following protocols will be covered:
  * :ref:`ref-ipsec`
@@ -54,21 +54,21 @@ GDOI
 
 L2TP
 -----
-For further details on :term:`L2TP`, see: 
+For further details on :term:`L2TP`, see:
 
 
 .. _ref-pptp:
 
 PPTP
 -----
-For further details on the :term:`PPTP`, see the :ref:`PPTP External Reference <ext-ref-pptp>` 
+For further details on the :term:`PPTP`, see the :ref:`PPTP External Reference <ext-ref-pptp>`
 
 
 .. _ref-sstp:
 
 SSTP
 -----
-For further details on the :term:`SSTP`, see: 
+For further details on the :term:`SSTP`, see:
 
 
 VPN Support on IOS Devices and ASA Firewall
@@ -306,7 +306,7 @@ Configure interface on which to service request
 Configure approrpiate static/dynamic routing to reach requesting devices
 
 Ensure time on the device is correct (NTP recommended)
-  
+
 Generate the public/private keys::
 
   crypto key generate rsa general-keys exporting label <CA-LABEL> modulus 2048
