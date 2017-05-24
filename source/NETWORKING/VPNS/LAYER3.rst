@@ -8,6 +8,7 @@ Layer 3 Virtual Private Networks
   IPSEC
   SSL
   LAYER3/DMVPN
+  LAYER3/GETVPN
 
 
 .. todo:: Document remaining Layer 3 VPN types
