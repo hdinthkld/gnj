@@ -129,8 +129,8 @@ Cooperative (COOP) Servers
 * Can also configure priorities of KS's to ensure consistency
 * Up-to 8 KSs can be defined as COOP
 
-Working Example
-===============
+GetVPN In Practice
+==================
 
 KS Configuration
 ----------------
@@ -158,3 +158,147 @@ Registration
   policies
 * Encrypted packet still maintains original IP header
 * Receiving GM decrypts packet using same TEK and policies
+* Any changes to the policy will cause an immediate rekey to the GMs (either
+  unicast or multicast)
+
+NAT Considerations
+------------------
+
+* When the KS is behind a NAT gateway, it should be configured to publish it's
+  NAT'd addresses so that the GMs know where to communicate with.
+
+
+GetVPN Configuration Steps
+==========================
+
+Assumptions are made that all basic IP connectvity is already in place
+
+Basic Unicast Rekeying with PSK Authentication
+==============================================
+
+Key Server Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^
+#. Authenticate and Enroll the KS with the CA (if using RSA signatures)
+
+#. Define Phase 1 Policy
+
+#. Pre-shared key (if using PSK authentication)
+
+#. Define IPSec Transform-set
+
+#. Define ACL that define the interesting traffic for the entire GetVPN group
+
+   * Usually Routing protocol and management traffic does not need to be
+     encrypted so these should usually be excluded
+   * GDOI (UDP 848) should also be excluded from encryption
+
+#. Define the GDOI Group
+
+   * Identity
+   * Server local
+   * Rekey Type, lifetime, authentication, retransmission
+   * Phase 2 SA details (Profile, ACL, replay counter, address)
+
+6. Generate RSA Keys
+
+Group Member Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Authenticate and Enroll the KS with the CA (if using RSA signatures)
+#. Phase 1 Policy
+#. Pre-shared key (if using PSK authentication)
+#. Define GDOI Group
+
+   * same ID number as on KS
+   * Server Address of KS
+   * Authentication method (PSK or RSA)
+#. Define Crypto map
+   * Set Group
+
+
+#.  Bind Crypto Map to Interface
+
+Multicast Rekeying with PSK Authentication
+==========================================
+
+All Devices (including MPLS nodes)
+----------------------------------
+#. Enable Multicast Routing
+
+::
+
+  ip multicast-routing
+
+#. On LAN/WAN Interface, enable appropriate PIM mode
+
+::
+
+  interface <type/slot>
+    ip pim {dense-mode | sparse-mode}
+
+#. for PIM Sparse define the ACL and apply to the SSM range
+
+::
+
+  access-list standard <id-or-name>
+  ! Define ACEs
+
+  ip pim ssm range <multicast-acl>
+
+Key Server
+----------
+
+#. Complete basic setup
+#. Exclude PIM and IGMP traffic from encryption
+#. Define Multicast ACL
+#. Define GDOI group but set to use multicast and specify the ACL
+
+::
+
+   crypto gdoi group <name>
+     no rekey transport unicast
+     rekey address ipv4 <multicast-acl-name>
+
+Group Member
+------------
+
+#. Complete basic setup, no additional steps needed
+#. Join GM to the Multicast group
+
+::
+
+  ip igmp join-group <multicast-ip> source <local-ip>
+
+
+
+
+COOP and GM Authorisation
+==========================================
+
+Key Server
+----------
+#. Complete basic configuration on both primary and secondary Key Servers
+
+  * Set the redundancy 'priority' on the secondary to a lower value than on the
+    primary
+  * Set the peer and key server address on each key server to their own IP
+     addresses
+
+#. Generate RSA Keys on Primary Key Server and export
+#. Import the Primary Key Servers keys into the secondary
+
+Group Member
+------------
+
+#. Complete Basic Information
+#. Configure with both Key server address
+
+Verification
+=============
+
+Basic GDOI Configuration
+::
+
+  show crypto gdoi
+
+* Will also show the redundancy status if configured
