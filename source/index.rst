@@ -15,8 +15,8 @@ The Grumpy Networkers Journal's
 
 .. toctree::
    :titlesonly:
-   :numbered:
-   :maxdepth: 2
+   :numbered: 3
+   :maxdepth: 3
    :caption: Contents:
 
    NETWORKING

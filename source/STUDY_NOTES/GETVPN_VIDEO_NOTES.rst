@@ -19,11 +19,15 @@ Terminologies
 
 * GDOI
 * KS
+
   * KEK
   * TEK
+
 * Rekey Process
+
   * Unicast
   * Multicast
+
 * GM
 * Tunnel Header Preservation
 * TBAR (Time Based Anti Replay)
@@ -171,10 +175,10 @@ NAT Considerations
 GetVPN Configuration Steps
 ==========================
 
-Assumptions are made that all basic IP connectvity is already in place
+Assumptions are made that all basic IP connectivity is already in place
 
 Basic Unicast Rekeying with PSK Authentication
-==============================================
+----------------------------------------------
 
 Key Server Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^
