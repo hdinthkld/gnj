@@ -7,3 +7,5 @@ Study Notes
    :caption: Contents:
 
    GETVPN_VIDEO_NOTES
+   FLEXVPN_VIDEO_NOTES
+   
