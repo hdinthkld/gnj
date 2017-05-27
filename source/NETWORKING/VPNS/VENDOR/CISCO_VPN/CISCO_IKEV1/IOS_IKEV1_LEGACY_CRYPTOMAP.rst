@@ -263,3 +263,16 @@ encryption domain)
 
 Troubleshooting
 ===============
+
+**Problem:** ISAKMP SA state reports 'MM_KEY_EXCH' and remote peer reports
+'%CRYPTO-4-IKMP_BAD_MESSAGE: IKE message from <ip> failed its sanity
+check or is malformed'
+
+**Solution:** Verify that the pre-shared key is configured correctly on both
+peers.
+
+**Problem:** Report peer reports 'phase 1 SA policy not acceptable!' and local
+peer does not establish an ISAKMP SA.
+
+**Solution:** Verify that both peers have a matchin Phase 1 Policy, encryption,
+hashing and DH group need to be the same on at least one policy.
