@@ -11,25 +11,17 @@ IPSec Introduction
 * Commonly used over the Internet where it may be cost prohibitive or not feasible to provide private lines (e.g. leased lines) between all sites
 * Can also be used in highly secure environments to protect traffic from snooping even when over a private network, such as when using a 3rd party provider :term:`MPLS`.
 
+.. _ref-ipsec:
 
+IPSEC
+-----
 
-
-
-VPN Support on IOS Devices and ASA Firewall
--------------------------------------------
-
-The table below lists which types of VPNs are supported on each major device type:
-
-============= === ===
-VPN           IOS ASA
-============= === ===
-Site-To-Site   Y   Y
-Remote Access  Y   Y
-SSL            Y   Y
-DMVPN          Y   N
-GETVPN         Y   N
-FlexVPN        Y   N
-============= === ===
+Can operate in the following modes:
+ * IKEv1 / IKEv2
+ * Site-To-Site or Lan-To-Lan
+ * Remote Access
+ * DMVPN
+ * GetVPN (GDOI)
 
 
 IPSec VPN Features
@@ -256,22 +248,8 @@ Asymmetric Encryption
 * Digitical Certificate
 * RSA Signature
 
-PKI Introduction
-================
-
-* Framework for managing the security attributes between peers who are enagaged in secure communication
-
-PKI Message Echange Process
----------------------------
-
-* Host generates RSA Signature (Public and private key) and sends public key to CA (CSR) for signing
-* CA will sign the certificate request with it's private key, validating it origin in form of a certificate
-* Host will save certificate and use as the public key portion in communicating with other peers
-
-
-
 AH
-==
+===
 
 * Proviates Integrity, Authentication and Anti-Reply
 * IP Protocol 51
