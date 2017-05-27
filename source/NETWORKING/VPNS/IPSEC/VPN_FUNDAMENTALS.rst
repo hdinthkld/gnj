@@ -1,9 +1,10 @@
-**************************************
+######################################
 Fundamentals of IPSec and Cryptography
-**************************************
+######################################
 
 IPSec Introduction
 ==================
+
 * Secure communication over insecure network
 * Enables reuse of existing connections for both public (i.e. Internet) and private  netwok services.
 * Used over any public network to ensure communication between two peers is kept secret.
@@ -11,68 +12,12 @@ IPSec Introduction
 * Can also be used in highly secure environments to protect traffic from snooping even when over a private network, such as when using a 3rd party provider :term:`MPLS`.
 
 
-VPN Protocols
-=============
-VPNs can run over a number of different protocols however certain protocols are best used in certain types of environments.
 
-The following protocols will be covered:
- * :ref:`ref-ipsec`
- * :ref:`ref-ssltls`
- * :ref:`ref-gdoi`
- * :ref:`ref-l2tp` (Needs further research)
- * :ref:`ref-pptp` (Needs further research)
- * :ref:`ref-sstp` (Needs further research)
-
-.. _ref-ipsec:
-
-IPSEC
------
-Can operate in the following modes:
- * Site-To-Site or Lan-To-Lan
- * Remote Access
- * DMVPN
- * GetVPN
-
-.. _ref-ssltls:
-
-SSL/TLS
--------
-Can operate in the following modes:
- * Clientless
- * Thin Client
- * Thick/Fat Client
-
-
-.. _ref-gdoi:
-
-GDOI
------
- * Used with MPLS networks to offer confidentiality and integrity services whilst still maintaining the any-to-any feature of MPLS
- * GDOI is used in GetVPN alongside IPSec to provide the key distribution services between peer in the same group.
-
-.. _ref-l2tp:
-
-L2TP
------
-For further details on :term:`L2TP`, see:
-
-
-.. _ref-pptp:
-
-PPTP
------
-For further details on the :term:`PPTP`, see the :ref:`PPTP External Reference <ext-ref-pptp>`
-
-
-.. _ref-sstp:
-
-SSTP
------
-For further details on the :term:`SSTP`, see:
 
 
 VPN Support on IOS Devices and ASA Firewall
 -------------------------------------------
+
 The table below lists which types of VPNs are supported on each major device type:
 
 ============= === ===
@@ -89,6 +34,7 @@ FlexVPN        Y   N
 
 IPSec VPN Features
 ==================
+
 This section covers the following VPN Features
  * Confidentiality
  * Integrity
@@ -97,12 +43,14 @@ This section covers the following VPN Features
 
 Confidentiality
 ---------------
+
   * Encrpyption Algorithms (e.g. AES, 3DES, ECC)
   * Plain text turned into cipher text
   * Only parties with the encrypted keys can see the unencrypted data
 
 Integrity
 ---------
+
   * Hashing Algorithms (MD5, SHA1, SHA2 Family)
   * Hashing algorithm is a one way function that turns arbitary data into a fixed size value (hash product) representing the original data.
   * Used to determine if data has been modified in transit
@@ -110,6 +58,7 @@ Integrity
 
 Authentication
 --------------
+
   * Data Origin Authentication
   * Happens before data exchange to validate each party is who they say they are
   * Using Pre-Shared Keys and/or Certificates (via PKI)
@@ -117,27 +66,32 @@ Authentication
 
 Anti-Replay
 -----------
+
   * Any data that arrives late, should not be trusted
   * Can be set in terms of data tranferred (e.g. Kilobytes) or time (e.g. seconds)
 
 IPSec Protocol Functions
 ========================
+
 IPSec is a suite of different protocols, each providing a different function to enable IPSec to work.
 
 The following protocols covered:
+
 * IKE
 * ESP
 * AH
 
 IKE
 ---
-Internet Key Exchange
+
+* Internet Key Exchange
 * Management protocols that provides a framework to exchange parameters and properties between VPN peers
 * Provides the "Phase 1" element of the VPN to initally setup the encryption keys used to actually transfer the real data.
 * Operates in either Main Mode or Aggresive Mode (IKEv1 only)
 
 Main Mode
 ^^^^^^^^^
+
 * 6 data exchanges between peers
 * Proposals are exchanged first between peers (1-2)
 * Keys are exchanged next using DH Protocol (3-4)
@@ -145,6 +99,7 @@ Main Mode
 
 Aggressive Mode
 ^^^^^^^^^^^^^^^
+
 * Only uses 3 data exchanges between peers
 * First exchange includes both proposals and key
 * Responder will authenticate proposal and sends own proposal
@@ -153,6 +108,7 @@ Aggressive Mode
 
 Quick Mode
 ^^^^^^^^^^
+
 * Part of IPSec Phase 2
 * Quick Mode is  used to recheck the attributes between peers
 * Makes use of an SPI (Security Parameter Index)
@@ -161,7 +117,8 @@ Quick Mode
 
 AH
 ---
-Authentication Header
+
+* Authentication Header
 * Provides Integrity features but no confidentiality
 * Itegrity, Authentication, Anti-Replay
 * Does not provide confidentiality features
@@ -169,7 +126,8 @@ Authentication Header
 
 ESP
 ---
-Encapsulated Security Payload
+
+* Encapsulated Security Payload
 * ESP Provides all of the needed features of a secure VPN
 * Integrity, Authentication, Anti-Reply
 * Confidentiality (Encryption)
@@ -180,6 +138,7 @@ IPSec Phases
 
 Phase 1
 -------
+
 * A single IKE bi-directional tunnel is created
 * Single key is used to authenticate the session
 * Used with both main mode and aggresive mode
@@ -198,12 +157,14 @@ GetVPN         Main
 
 Phase 1.5
 ---------
+
 * Optional Step to provide additional authentication step
 * Known as XAUTH or "Mode Config"
 * Can be used to send additional attributes to the client, such as in remote access situation.
 
 Phase 2
 -------
+
 * Only completed once Phase 1 is complete
 * Creates 2 seperate uni-directional tunnels, one in each direction
 * Firewalls must allow traffic inbound and outbound between peers (most stateful firewalls, will do this automatically based on the IKE exchange)
@@ -219,6 +180,7 @@ IPSec Modes
 
 Transport Mode
 --------------
+
 * Protects Layer 4 and above layer data
 * Used by DMVPN
 * ESP/AH Header is added in between Layer 3 and Layer 4 headers
@@ -227,6 +189,7 @@ Transport Mode
 
 Tunnel Mode
 -----------
+
 * Protects Layer 3 and above layer data
 * Used by Site-To-Site, Remote Access and GetVPN
 * ESP/AH Header is added before original Layer 3 Header
@@ -234,6 +197,7 @@ Tunnel Mode
 
 Security Association
 ====================
+
 * Group of security parameters and policies that are agreed between two IPSec Peers
 * Contains following components
   * SAD
@@ -241,11 +205,14 @@ Security Association
 
 SAD (Security Association Database)
 -----------------------------------
+
 * Peer IP
 * SPI (Security Parameter Index)
 * IPsec Protocol information (e.g. ESP/AH)
 
 SPI (Security Parameter Index)
+------------------------------
+
 * Hash of Security Policy Database (Enc, Inte, Mode, Lifetime)
 * The SPI is used by the receiving device to determine which policy in which to handle the received packets
 
@@ -255,6 +222,7 @@ SPD (Security Policy Database)
 
 DH Group
 ========
+
 * Allows two parties to share secret key over an insecure channel
 * Devices add a random value to the key which is then exchanged to the other party
 * The same value calculated before is then added to the received value
@@ -264,11 +232,13 @@ DH Group
 
 Encryption
 ==========
+
 * Mathematical algorithm
 * A key applied along with the algorithm makes the contents computationally difficult to be read by someone without the key to descript it.
 
 Symmetric Encryption
 --------------------
+
 * Secret Key Cryptography
 * Single key used to encrypt and also decrypt the data
 * DES (56-bit key)
@@ -278,6 +248,7 @@ Symmetric Encryption
 
 Asymmetric Encryption
 ---------------------
+
 * Public Key Cryptography
 * One key (public key) is used to encrypt the data, the second (private) key is used to decrypt the data
 * Only the recipient should know the private key
@@ -287,10 +258,12 @@ Asymmetric Encryption
 
 PKI Introduction
 ================
+
 * Framework for managing the security attributes between peers who are enagaged in secure communication
 
 PKI Message Echange Process
 ---------------------------
+
 * Host generates RSA Signature (Public and private key) and sends public key to CA (CSR) for signing
 * CA will sign the certificate request with it's private key, validating it origin in form of a certificate
 * Host will save certificate and use as the public key portion in communicating with other peers
@@ -298,7 +271,7 @@ PKI Message Echange Process
 
 
 AH
-===
+==
 
 * Proviates Integrity, Authentication and Anti-Reply
 * IP Protocol 51
@@ -308,6 +281,7 @@ AH
 
 ESP
 ===
+
 * Provides all the featues of AH (I, A, AR) as well as confidentiality (encryption)
 * IP Protocol 50
 * Doesn't include external IP header for ICV
@@ -316,17 +290,20 @@ ESP
 
 NAT-T
 =====
+
 * Enables IPSec VPN sessions to pass through a NAT device
 * Adds a UDP header before the ESP header so that NAT can be performed
 
 NAT-T Steps
 -----------
+
 The following3 steps are performed in order the VPN peers to determine if NAT is in place:
 * Support
 * Detection
 * Decision
 
 In a bit more detail:
+
 * IKE Phase 1 two peers exchange their vender id and IOS verion to determine the NAT-T types supported
 * A hash is exchanged between peers, if a match occurs assumed no NAT otherwise it is assumed NAT is in use
 * In IKE Phase 2 the UDP header is inserted before the ESP header
@@ -336,6 +313,7 @@ IKE Versions
 
 IKE Version 1
 -------------
+
 * Uses 6 messages (or 3 for AH)
 * Uses ISAKMP
 * Has NAT-T support added as an additional feature
@@ -346,6 +324,7 @@ IKE Version 1
 
 IKE Version 2
 -------------
+
 * 4 - 6 messages (4 compulsory)
 * NAT-T Support built in
 * Check Peer existance via cookies
@@ -355,6 +334,7 @@ IKE Version 2
 
 Hashing Introduction
 ====================
+
 * A one way process uses to ensure integrity
 * A fixed size value is calculated by the Hashing algorithm regardless of the size of the original data
 * Any difference in the hash indicates that data has been modified and therefore lost integrity so should be dropped

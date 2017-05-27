@@ -15,7 +15,7 @@ PPTP
 Sphinx
 ======
  |sphinx_docs_title|  <|sphinx_docs_url|>
- 
+
 
 .. |tn_el_pptp_title| replace:: Microsoft Technet on PPTP
 .. |tn_el_pptp_url| replace:: https://technet.microsoft.com/en-us/library/cc958045.aspx

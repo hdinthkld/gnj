@@ -16,12 +16,12 @@ The Grumpy Networkers Journal's
 .. toctree::
    :titlesonly:
    :numbered: 3
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents:
 
    NETWORKING
-   DOCUMENTATION
    SECURITY
+   DOCUMENTATION
    STUDY_NOTES/INDEX
    TODO
    glossary
