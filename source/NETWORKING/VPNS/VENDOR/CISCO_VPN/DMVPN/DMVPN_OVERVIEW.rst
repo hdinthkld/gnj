@@ -169,3 +169,52 @@ Depending on the routing protocol used it may also be necesary to specify
 certain additional properties.  This will be covered later.
 
 .. rubric:: Steps 2:
+
+Once the hub is ready to accept connections we can now configure the spokes.
+Practically all of this configuration will be repeated for the spokes, the key
+changes being:
+
+* IP address assigned to the tunnel interface
+* The networks that are advised through the tunnel as part of the routing
+  protocol.
+
+  As with any VPN tunnel, we first need to configure the IKE Phase 1,
+  authentication details and IPSec Phase 2 Transform set.  These details
+  should match what has been configured on the hub.
+
+  Next the mGRE tunnel interface needs to be configured.  This is where
+  the bulk of the configuration will be placed as it is necessary to:
+
+  #. Define the source IP/interface of the tunnel
+  #. Define the tunnel (private) IP address of the spoke
+  #. Define the private and public IP address of the Hub
+  #. Define which IP address to query for NHRP mappings, the next hop server
+  #. Define the network ID for this DMVPN network
+  #. Configure any properties specific to the routing protocol
+  #. Specify which IPSec profile to use to encrypt the traffic
+
+  It is not necessary to define the actual Hub as the tunnel endpoint as this
+  will be handled by the Next Hop Server.  This tunnel interface will be used
+  for all connections, both hub and spoke.
+
+DMVPN Redundancy
+================
+
+DMVPN redundacy can be implemented using one of two methods:
+#. Configure redundant hubs
+#. Configure seperate mGRE subnets, effectively to seperate DMVPN networks
+
+With a single DMVPN and redundant hubs the network is subject to the limitations
+of a single routing protocol.  Where as if two DMVPN subnets are used it allows
+for flexibility in the assignemnt of unique routing protocols and cost metrics
+for the two networks.
+
+In IOS versions prior to 12.(4.2) it was necessary to assign a unique IKE
+identity (IP address) per DMVPN.
+
+In the case of a single DMVPN network with dual hubs the decision on which hub
+to use is left to the routing protocol.  The secondary hub as well as acting as
+an NHS will also be a client to the primary NHS. If the primary hub were to fail
+eventually the records would time out and the spokes would query the secondary
+NHS instead.  Routing between the spokes will be determined by the routing
+protocol.
