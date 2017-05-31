@@ -36,7 +36,7 @@ Step 3: Define the IPSec Proposal
 .. code-block:: none
 
   crypto ipsec transform-set <ts-name> <encryption-algorithm> <integrity-algorithm>
-    mode tunnel
+    mode { tunnel | transport }
 
 Step 4: Define the IPsec Profile
 --------------------------------
@@ -69,7 +69,7 @@ Step 5: Create the tunnel interface
     no shutdown
 
 Spoke Configuration Steps
-=======================
+=========================
 
 Step 1: Define the IKE Phase 1 Policy
 -------------------------------------
@@ -98,7 +98,7 @@ Step 3: Define the IPSec Proposal
 .. code-block:: none
 
   crypto ipsec transform-set <ts-name> <encryption-algorithm> <integrity-algorithm>
-    mode tunnel
+    mode { tunnel | transport }
 
 Step 4: Define the IPsec Profile
 --------------------------------
@@ -119,9 +119,9 @@ Step 5: Define the Tunnel Interface
     tunnel mode gre multipoint
     tunnel key <unique-key-per-dmvpn>
 
-    ip nhrp map <hub-private-ip> <hub-public-ip>
-    ip nhrp nhs <hub-private-ip>
-    ip nhrp map multicast <hub-public-ip>
+    ip nhrp map <hub-dmvpn-private-ip> <hub-nbma-public-ip>
+    ip nhrp nhs <hub-dmvpn-private-ip>
+    ip nhrp map multicast <hub-nbma-public-ip>
 
     ip nhrp authentication <nhrp-password>
     ip nhrp network-id <unique-id-per-dmvpn>
@@ -157,10 +157,24 @@ Link State Protocols
 
 Routing protocols such as OSPF will automatically ensure all peers receiving the
 routing updates because this is the Designated Routers (DR) responsibility. It
-however important to ensure that none of the spokes can becomee the DR.
+however important to ensure that none of the spokes can become the DR.
 
-This can be achieved by setting the priority of the spokes on the tunnel
-interface to 0.
+It is also vital that the tunnel interface is set to us the network type of
+"broadcast" to ensure that the DR/BDR election occurs.  If this is not set
+and more than two router Ids are seen on the same subnet, this could result
+in flapping neighbour relationships.
+
+The above can be achieved by setting the priority of the spokes to 0 and
+manually setting the network type on the tunnel as shown below:
+
+.. code-block:: none
+
+  interface tunnel <id>
+    ip ospf network broadcast
+    ip ospf priority 0
+
 
 When using dual-hub, its important that the priority of the primary hub is
-higher than that of the secondary.
+higher than that of the secondary. In the case of a primary hub failure, the
+spokes will notice for themselves when the hold time has expired and
+automatically start queying the secondary NHS.
