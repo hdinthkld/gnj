@@ -5,7 +5,7 @@ IPSEC VPNs
 .. toctree::
   :titlesonly:
 
-  VPN_FUNDAMENTALS
+  IKE Version 2 <IKEV2>
   VPN_ENHANCEMENTS
   VPN_GRE_IPSEC
   VPN_IPSEC_NAT
