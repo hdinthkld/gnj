@@ -1,5 +1,5 @@
-356########################################################
-Cisco IOS IKEv1 VPN with Static VTI with Pre-shared Keys
+########################################################
+Cisco IOS IKEv1 VPN with Dynamic VTI with Pre-shared Keys
 ########################################################
 
 In this section we will configure a hub router that is able to offer VPN tunnels

@@ -1,3 +1,5 @@
+.. _ios_ikev1_legacy_cryptomap:
+
 ##########################################################
 Cisco IOS IKEv1 VPN Legacy Crypto Map with Pre-shared Keys
 ##########################################################

@@ -6,6 +6,4 @@ Study Notes
    :titlesonly:
    :caption: Contents:
 
-   GETVPN_VIDEO_NOTES
-   FLEXVPN_VIDEO_NOTES
-   
+   CISCO_SIMOS/TOPICS

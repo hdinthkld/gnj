@@ -1,3 +1,5 @@
+.. _pki_overview:
+
 ##################################
 Public Key Infrastructure Overview
 ##################################

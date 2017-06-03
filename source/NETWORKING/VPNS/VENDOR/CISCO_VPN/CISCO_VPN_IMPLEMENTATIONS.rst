@@ -4,7 +4,7 @@ Cisco VPN Implementations
 
 .. toctree::
   :titlesonly:
-  :maxdepth: 1
+  :maxdepth: 3
   :glob:
 
   IKEv1 <CISCO_IKEV1/IKEV1_OVERVIEW>

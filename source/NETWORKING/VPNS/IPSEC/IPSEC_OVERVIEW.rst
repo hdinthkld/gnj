@@ -1,3 +1,5 @@
+.. _vpn_ipsec_intro:
+
 ##########
 IPSEC VPNs
 ##########
@@ -133,6 +135,8 @@ Sometimes all that is required is to ensure that the data has not been modified
 other times confidentiality is essential to offer as much protection as possible
 that the data has not been examined en route to it's destination.
 
+.. _vpn_ipsec_esp:
+
 Encapsulating Security Payload (ESP)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -156,6 +160,8 @@ It should be noted that the ESP header itself is not encrypted otherwise the
 remote peer would not be able to identify which connection the packet is
 associated with.  It also explains why for more advanced NAT gateway's it
 may be possible for ESP traffic to pass through them without issue.
+
+.. _vpn_ipsec_ah:
 
 Authentication Header (AH)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -196,6 +202,8 @@ default method for secure key negotiation.
 
 In order to exchange keys over an insecure transport medium, IKE uses the
 Diffie-Hellman Key management protocol.
+
+.. _vpn_ipsec_dh:
 
 Diffie-Hellman Key Exchange
 ---------------------------
@@ -341,6 +349,8 @@ In modern networks where sites are using dynamic IP addresses it is recommended
 to use digitial certificates for authentication and not pre-shared keys. This
 allows Main mode to be used with the identity being established from the
 details in the certificate.
+
+.. _vpn_ipsec_authmethods:
 
 Authentication Methods
 ^^^^^^^^^^^^^^^^^^^^^^

@@ -11,6 +11,7 @@ easier to maintain full-mesh connectivity as the network grows.
 Allows for both hub-to-spoke and spoke-to-spoke (Phase 2) connectivity
 
 
+.. _cisco_dmvpn_functional_components:
 
 Functional Components
 =====================

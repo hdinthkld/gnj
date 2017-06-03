@@ -10,7 +10,7 @@ The following configurations will be demonstrated:
 
   IOS_IKEV1_LEGACY_CRYPTOMAP
   IOS_IKEV1_STATIC_VTI
-  IOS_IKEV2_DYNAMIC_VTI
+  IOS_IKEV1_DYNAMIC_VTI
 
 * Static VTI Based IKEv1 VPN
 * Dynamic VTI Based IKEv1 VPN
