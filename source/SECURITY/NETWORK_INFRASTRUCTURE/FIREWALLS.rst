@@ -335,6 +335,6 @@ gained elsewhere (such as who requested the rule or the date of the request)
 should be recorded elsewhere (such as in the organisations ticketing system) and
 it isn't something that would be needed at quick glance.
 
-An regular firewall review may be take place to ensure that all rules are still
+A regular firewall review may take place to ensure that all rules are still
 needed and this is where the requestor information is useful but it is not
 something that would be helpful when troubleshooting an issue.
