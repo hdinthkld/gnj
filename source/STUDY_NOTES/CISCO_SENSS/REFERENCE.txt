@@ -1,0 +1,17 @@
+#########################################################################
+Cisco CCNP SENSS - Reference Material
+#########################################################################
+
+Reference
+
+Cisco SENSS Story Material
+
+https://learningnetwork.cisco.com/community/certifications/ccnpsecurity/senss/study-material
+
+CCNP Security SENSS Deep Dive (Baldev Singh)
+
+https://www.udemy.com/ccnp-security-senss-300-206-deep-dive-with-baldev/learn/v4/overview
+
+Cisco Security Manager Reference
+
+http://www.cisco.com/c/en/us/support/security/security-manager-4-14/model.html

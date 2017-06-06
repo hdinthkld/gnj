@@ -23,6 +23,7 @@ The Grumpy Networkers Journal's
    SECURITY
    DOCUMENTATION
    STUDY_NOTES/INDEX
+   VENDOR
    TODO
    glossary
    external_references

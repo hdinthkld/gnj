@@ -3,12 +3,13 @@ Virtual Private Networks
 ########################
 
 .. toctree::
+  :glob:
   :titlesonly:
   :maxdepth: 1
 
   IPSEC/IPSEC_OVERVIEW
   SSL/SSL_OVERVIEW
-  VENDOR/CISCO_VPN/CISCO_VPN_IMPLEMENTATIONS
+  VENDOR
 
 Introduction
 ============
