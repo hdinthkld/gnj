@@ -6,9 +6,10 @@ Cisco Firewall Features
   :maxdepth: 1
   :titlesonly:
 
-  RULES_MGMT
-  IOS Zone Based Firewalls <ZBF>
-  THREAT_DETECTION
+  ASAFW
+  IOS/IOSFW
+  IOS/ZBFW
+    
   BOTNET
   HIGH_AVAILABILITY
   Virtual Firewalls <CONTEXTS>

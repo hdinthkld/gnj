@@ -1,3 +1,5 @@
+.. _cisco_iosfw:
+
 ==================
 Cisco IOS Firewall
 ==================
@@ -28,7 +30,6 @@ Implementation
 #. Define the Access Control List that meets the security requirements
 #. Bind the Access Control List to the relevant interface, inbound and/or
    outbound.
-
 
 .. rubric:: Create Object Groups
 
@@ -99,6 +100,10 @@ It is also possible to renumber the ACL using the following command:
 
 Once created the ACL must be bound to the appropriate interface.  This can
 be done either inbound or outbound:
+
+.. warning:: When applying ACL to the interface through which the device
+             is being monitored, it is important that the management traffic
+             also be permitted otherwise the session will be disconnected.
 
 .. code-block:: none
 

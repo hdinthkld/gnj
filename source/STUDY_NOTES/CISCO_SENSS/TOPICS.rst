@@ -14,7 +14,8 @@ Cisco CCNP - Implementing Cisco Secure Mobility Solutions (300-206 SENSS)
 
   1.1 Implement firewall (ASA or IOS depending on which supports the implementation)
 
-  :strikethrough:`1.1.a Implement ACLs`
+  1.1.a Implement ACLs on :ref:`IOS <cisco_iosfw_rules>`, :ref:`ZBFW <cisco_zbfw_rules>`
+  and :ref:`ASA <cisco_asafw_rules>`
 
   :strikethrough:`1.1.b Implement static/dynamic NAT/PAT`
 
