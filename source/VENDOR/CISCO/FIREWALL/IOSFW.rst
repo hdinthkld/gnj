@@ -35,7 +35,7 @@ Implementation
 Object groups can be either for specifying groups of IP addresses (subnets or
 hosts) and/or for specifying groups of service ports.
 
-.. note:: This feature is available sine IOS 12.4(20)T
+.. note:: This feature is available since IOS 12.4(20)T
 
 .. code-block:: none
 

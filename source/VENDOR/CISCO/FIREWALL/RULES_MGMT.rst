@@ -6,11 +6,9 @@ Enforcing Security Policies using Cisco Firewall Features
   :maxdepth: 1
   :titlesonly:
 
-* Unified IPv6/IPv4 ACLS - What platforms are supported?
-* Support for Object Groups - IOS/ASA?
-
   IOSFW
   ZBFW
   ASAFW
 
-  
+* Unified IPv6/IPv4 ACLS - What platforms are supported?
+* Support for Object Groups - IOS/ASA?
