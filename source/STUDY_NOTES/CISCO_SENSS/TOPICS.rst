@@ -124,7 +124,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   6.1 Describe security operations management architectures
 
-    6.1.a Single device manager vs. multi-device manager
+    :ref:`6.1.a Single device manager vs. multi-device manager <asacx_multiple_mode>`
 
   6.2 Describe Data Center security components and considerations
 

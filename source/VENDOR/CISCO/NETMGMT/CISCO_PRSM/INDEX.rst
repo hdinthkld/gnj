@@ -97,6 +97,9 @@ does not allow connection state information to be communicated.
 When a failover event occurs the newly active ASA will only redirect new connections
 through the CX services.  Existing connections will not be redirected.
 
+
+.. _asacx_multiple_mode:
+
 Managing ASA-CX in Multiple Device Mode
 =======================================
 
