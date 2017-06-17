@@ -136,4 +136,4 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   6.4 Describe common IPv6 security considerations
 
-    :strikethrough:`6.4.a Unified IPv6/IPv4 ACL on the ASA`
+    :ref:`6.4.a Unified IPv6/IPv4 ACL on the ASA <cisco_asa_unified_acl>`
