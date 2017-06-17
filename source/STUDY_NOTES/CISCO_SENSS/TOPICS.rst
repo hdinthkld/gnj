@@ -15,7 +15,8 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
   1.1.a Implement ACLs on :ref:`IOS <cisco_iosfw>`, :ref:`ZBFW <cisco_zbfw>`
   and :ref:`ASA <cisco_asafw_rules>`
 
-  1.1.b Implement static/dynamic NAT/PAT
+  1.1.b Implement static/dynamic NAT/PAT (on
+  :ref:`IOS<cisco_ios_nat>` and :ref:`ASA <cisco_asa_nat>` devices)
 
   :ref:`1.1.c Implement object groups <cisco_asa_objectgroups>`
 
