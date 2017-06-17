@@ -21,6 +21,7 @@ The Grumpy Networkers Journal's
 
    NETWORKING
    SECURITY
+   CLOUD
    DOCUMENTATION
    STUDY_NOTES/INDEX
    VENDOR

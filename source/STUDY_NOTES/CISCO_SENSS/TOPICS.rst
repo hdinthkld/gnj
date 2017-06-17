@@ -129,7 +129,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   6.2 Describe Data Center security components and considerations
 
-    6.2.a Virtualization and Cloud security
+    6.2.a Virtualization and :ref:`Cloud security <cloud_services>`
 
   6.3 Describe Collaboration security components and considerations
 
