@@ -8,8 +8,6 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
    REFERENCE
 
-.. role:: strikethrough
-
 1.0 Threat Defense (25%)
 
   :ref:`1.1 Implement firewall (ASA or IOS depending on which supports the implementation) <cisco_firewall>`
@@ -27,9 +25,9 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   1.1.f Configure application filtering and protocol inspection
 
-  :strikethrough:`1.1.g Describe ASA security contexts`
+  1.1.g Describe ASA security contexts
 
-:ref:`1.2 Implement Layer 2 Security <cisco_switching_features>`
+  :ref:`1.2 Implement Layer 2 Security <cisco_switching_features>`
 
   :ref:`1.2.a Configure DHCP snooping <cisco_dhcp_snooping>`
 

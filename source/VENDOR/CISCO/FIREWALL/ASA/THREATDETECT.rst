@@ -113,20 +113,20 @@ Configuration
 
 To enable basic threat detection, use the command:
 
-.. code-block::
+.. code-block:: none
 
   threat-detection basic-threat
 
 A number of 'rates' can be viewed using the command:
 
-.. code-block::
+.. code-block:: none
 
   show run all threat-detection
 
 In order to reconfigure these rates, simply reconfigure the
 appropriate rate command accountingly such as:
 
-.. code-block::
+.. code-block:: none
 
   threat-detection rate acl-drop rate-interval 1200 average-rate 2500 burst-rate 550
 
@@ -134,7 +134,7 @@ appropriate rate command accountingly such as:
 
 Use the below command to enable Advanced Threat Detection:
 
-.. code-block::
+.. code-block:: none
 
   threat-detecion statistics
 
@@ -147,28 +147,28 @@ Custom rates can also be configured as wel Basic threat Detection.
 
 To enable Scanning Threat Detection:
 
-.. code-block::
+.. code-block:: none
 
   threat-detection scanning-threat
 
 As with Basic Threat detection the rates can be reconfigured using commands
 prefixed with:
 
-.. code-block::
+.. code-block:: none
 
   threat-detection rate scanning-threat ....
 
 To enable shunning of a suspect attacker and configure how long
 they should be shunned use:
 
-.. code-block::
+.. code-block:: none
 
   threat-detection scanning-threat shun duration <seconds>
 
 IP addresses and object-group can be set as exceptions to shunning
 by specifying them as follows:
 
-.. code-block::
+.. code-block:: none
 
   threat-detection scanning-threat shun except ip-address <ip> <mask>
   threat-detection scanning-threat shun except object-group <objgrp-name>
