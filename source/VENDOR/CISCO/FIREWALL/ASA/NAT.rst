@@ -1,3 +1,5 @@
+.. _cisco_asa_nat:
+
 =======================================
 Cisco ASA - Network Address Translation
 =======================================
@@ -57,12 +59,7 @@ all directed to different hosts on the internal network.
 
 .. rubric:: Pre-8.3 configuration
 
-.. code-block:: none
-
 .. rubric:: Post-8.3 configuation
-
-Example of Static PAT
-
 
 Dynamic NAT/PAT
 ---------------
@@ -79,6 +76,7 @@ not address.
 .. rubric:: Example of post-8.3 Dynamic PAT
 
 .. code-block:: none
+
   object-network <obj-name>
     host <ip>
     nat (real-interface, translated-interface) interface service <protocol> <service> <service>
