@@ -9,6 +9,6 @@ Cisco Network Managmement Features
   CDP and LLDP <CDP>
   SNMP
   NETFLOW
-  CSM
+  CISCO_CSM/INDEX
   CISCO_PRSM/INDEX
   CISCO_PRIME/INDEX
