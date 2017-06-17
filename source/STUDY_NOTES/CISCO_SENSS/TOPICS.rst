@@ -108,8 +108,11 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
   5.1 Design a Firewall Solution
 
     :strikethrough:`5.1.a High-availability`
+
     :strikethrough:`5.1.b Basic concepts of security zoning`
+    
     :strikethrough:`5.1.c Transparent & Routed Modes`
+    
     :strikethrough:`5.1.d Security Contexts`
 
   5.2 Layer 2 Security Solutions
