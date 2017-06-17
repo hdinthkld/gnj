@@ -29,15 +29,15 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   :strikethrough:`1.1.g Describe ASA security contexts`
 
-1.2 Implement Layer 2 Security
+:ref:`1.2 Implement Layer 2 Security <cisco_switching_features>`
 
-  1.2.a Configure DHCP snooping
+  :ref:`1.2.a Configure DHCP snooping <cisco_dhcp_snooping>`
 
   1.2.b Describe dynamic ARP inspection
 
   1.2.c Describe storm control
 
-  1.2.d Configure port security
+  :ref:`1.2.d Configure port security <cisco_portsecurity>`
 
   1.2.e Describe common Layer 2 threats and attacks and mitigation
 

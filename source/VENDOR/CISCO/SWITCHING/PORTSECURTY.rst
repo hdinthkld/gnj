@@ -1,3 +1,5 @@
+.. _cisco_portsecurity:
+
 ###################
 Cisco Port Security
 ###################
@@ -8,13 +10,13 @@ Overview
 In some of the previous sections its been discussed how possibly dumb or maliscious/rogue
 devices can cause problems in the network, many of the earlier techniques have used a
 means of detecting that those devices are (or at) there such as the prescense or lack of
-BPDUs. How then can a device be detected that is not actively probing or sending out 
+BPDUs. How then can a device be detected that is not actively probing or sending out
 other data.
 
 One of the earliest solutions to this is Cisco Port Security.
 
 Port Security works by monitoring and recording the MAC addresses seen on a configured port.
-It also tracks how many MACs have been seen on the port. This can be used in a number of 
+It also tracks how many MACs have been seen on the port. This can be used in a number of
 ways:
 
 * Preventing more than a configured number of MAC addresses from being allowed on the port
@@ -24,7 +26,7 @@ ways:
 
 MAC Addresses can either by statically configured or learnt dynamically. Even if the port
 where a dynamically learnt MAC address exists goes down, it will still remain in the
-configuration and will be saved if the running configuration is wrote to the startup 
+configuration and will be saved if the running configuration is wrote to the startup
 configuration.
 
 A number of actions can be taken when a situation arises
@@ -79,10 +81,10 @@ Troubleshooting
 ---------------
 
 It is not possible to have the same secure MAC address configured on two different switch
-ports. This includes when multiple switches are combined into a switch stack. 
+ports. This includes when multiple switches are combined into a switch stack.
 
-In a high availability setup (such as with Load Balancing or EtherChannels) do not configure 
-Port Security on those ports, if you do at least ensure that the MAC address aging is 
+In a high availability setup (such as with Load Balancing or EtherChannels) do not configure
+Port Security on those ports, if you do at least ensure that the MAC address aging is
 enabled with a very low value.  The minimum value that can be set for this is 1 minute so an
 outage should still be expected unless multiple servers are used with a method not involving
 shared MAC Addresses.

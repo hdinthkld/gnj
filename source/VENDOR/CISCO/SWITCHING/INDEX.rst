@@ -1,3 +1,5 @@
+.. _cisco_switching_features:
+
 ########################
 Cisco Switching Features
 ########################
@@ -26,4 +28,3 @@ Cisco Switching Features
   IPv6 Secure Neighbour Discovery <IPV6SECND>
   Controll Plane Policing <COPP>
   802.1x and NAC <NAC>
-

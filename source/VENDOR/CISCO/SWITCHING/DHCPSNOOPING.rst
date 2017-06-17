@@ -1,3 +1,5 @@
+.. _cisco_dhcp_snooping:
+
 *******************
 Cisco DHCP Snooping
 *******************
@@ -12,7 +14,7 @@ that random router they found at home into the network and use it as a switch...
 that it was also running a DHCP server for their old broadband connection.
 
 DHCP snooping works by tracking the communications between the end-user device and the
-the DHCP server.  Any responses from untrusted DHCP servers are dropped. 
+the DHCP server.  Any responses from untrusted DHCP servers are dropped.
 
 Sources of DHCP information are defined as either Trusted or Untrusted.  This is done on
 port level.  A port where DHCP replies should be seen, such as the uplink to a server switch
@@ -63,12 +65,12 @@ The following represents a minimal configuration with the following steps:
 .. rubric:: Configure the trusted interfaces where DHCP traffic should be seen
 
 .. code-block:: none
-  
+
   interface <type> <slot/num>
     ip dhcp snooping trust
 
 .. rubric:: Enable DHCP snooping on a VLAN
-  
+
 .. code-block:: none
 
   ip dhcp snooping vlan <vlan-id>
@@ -78,7 +80,7 @@ The following represents a minimal configuration with the following steps:
 .. code-block:: none
 
   ip dhcp snooping
-  
+
   ! Optional
   ip dhcp snooping information option [replace | allow-untrusted ]
 
@@ -95,7 +97,7 @@ The following represents a minimal configuration with the following steps:
 
 .. rubric:: Configure the DHCP Snooping Database Agent
 
-If the switch were to reboot and the DHCP database this could lead to network distruption. 
+If the switch were to reboot and the DHCP database this could lead to network distruption.
 It is recommended that the the database is stored on a TFTP server so that when the
 switch reloads it will retrieve the latest database and reload the bindings without taking
 unnecessary space on the switches flash memory.
@@ -159,4 +161,3 @@ http://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/12-2SX/config
 **Packet Pushers - Five things To Know About DHCP Snooping**
 
 http://packetpushers.net/five-things-to-know-about-dhcp-snooping/
-
