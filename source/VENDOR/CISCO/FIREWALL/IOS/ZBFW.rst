@@ -90,7 +90,7 @@ The policy is applied as follows:
   policy-map type inspect <pm-name>
 
     ! Specify the traffic class(es) created in the previous step
-    class type inpect <cm-name>
+    class type inspect <cm-name>
       {inspect | drop | pass}
 
 
@@ -150,3 +150,5 @@ To see the statistics for a specific zone pair, use the following command:
 .. code-block::
 
   show policy-map type inspect zone-pair <zone-pair-name>
+
+
