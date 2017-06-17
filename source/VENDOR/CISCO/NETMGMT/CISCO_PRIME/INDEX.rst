@@ -8,7 +8,7 @@ Overview
 ========
 
 
-.. note:: Cisco Prime Infrastructue should not be confused with :ref:`cisco_prsm`.
+.. note:: Cisco Prime Infrastructure should not be confused with :ref:`cisco_prsm`.
           PRSM was both a built-in tool and standalone server used to manage the
           EOL'd Cisco ASA-CX Module which has now been replaced by Cisco Firepower and it's
           manageable tool, the FireSight Management Centre (FMC).
@@ -29,5 +29,3 @@ Inventory Management
 
 Managing Upgrades
 =================
-
-

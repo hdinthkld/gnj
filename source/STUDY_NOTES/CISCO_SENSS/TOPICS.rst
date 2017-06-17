@@ -21,7 +21,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   :ref:`1.1.c Implement object groups <cisco_asa_objectgroups>`
 
-  1.1.d Describe threat detection features
+  :ref:`1.1.d Describe threat detection features <cisco_asa_threatdetection>`
 
   1.1.e Implement botnet traffic filtering
 
