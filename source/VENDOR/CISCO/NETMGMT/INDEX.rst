@@ -10,4 +10,4 @@ Cisco Network Managmement Features
   SNMP
   NETFLOW
   CSM
-  CISCO_PRIME
+  CISCO_PRIME/INDEX
