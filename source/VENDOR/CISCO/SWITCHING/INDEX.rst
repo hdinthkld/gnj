@@ -9,16 +9,21 @@ Cisco Switching Features
   DTP
   VTP
   ISL
+  PVLAN
+  PORTFAST
+  ROOTGUARD
+  BPDUGUARD
+  UPLINKFAST
+  BACKBONEFAST
+  LOOPGUARD
+  ETHERCHANNELGUARD
+  PORTSECURITY
   DHCPSNOOPING
   DAI
-  PVLAN
-  ROOTGUARD
-  BPDU Guard and Filtering <BPDUGUARD>
-  Layer 2 PDU Rate Limiter <L2PDU>
-  STOMCONTROL
-  PORTSECURITY
-  802.1AE and MACSec <MACSEC>
-  IPSRCVERIFY
-  IPv6 Secure ND <SEND>
-  Control Plane Policing <COPP>
+  STORMCONTROL
+  IPSOURCEVERIFY
+  MACSEC
+  IPv6 Secure Neighbour Discovery <IPV6SECND>
+  Controll Plane Policing <COPP>
   802.1x and NAC <NAC>
+
