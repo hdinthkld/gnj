@@ -5,7 +5,7 @@ Cisco ASA Firewall - Rules Management
 =====================================
 
 Overview
----------
+========
 
 The Cisco ASA is a dedicated firewall appliance and has much more structure
 to the way in which traffic filtering is applied that a general purpose
@@ -15,8 +15,32 @@ Unlike a router the filtering of traffic to the firewall is handled seperately
 than transit traffic through the device, so there is no risk of loosing
 management access when amending user policies.
 
+.. _cisco_asa_unified_acl:
+
+Unified ACL
+===========
+
+Prior to version 9.0(1) it was necessary to manage IPv6 and IPV4 access
+lists seperately.  Later versions have unified this functionality and
+removed the IPv6 specific commands.
+
+This now means that a single access-list can now include a mixture of
+both IPv4 and IPV6 hosts and networks. Object groups can also be include a
+mixture of these addresses as well befoe being bound to the ACL.
+
+In order to support this the 'any' keyword has been modified to include
+both IPv4 and IPv6 addressing.  The new 'any4' and 'any6' keywords now refer
+to their respective IP addressing version (IPv4 and IPv6 respectively).
+
+Although the new features allow the specifying of an IPv4 and and IPv6
+destination (and vice versa), communication between these devices will only
+work if NAT46/NAT64 has been configured to map the addresses to a valid 
+address in the other IP version.  Without NAT46/NAT64 the commands are still
+valid but only communication betwee the same IP versions will function
+correctly.
+
 Implementation
---------------
+==============
 
 In order to implementing filtering on the firewall the following steps must
 be done:
