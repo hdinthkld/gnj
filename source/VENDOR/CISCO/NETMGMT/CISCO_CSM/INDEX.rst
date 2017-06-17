@@ -256,6 +256,6 @@ Cisco Security Manager 4.14 User Guide
 http://www.cisco.com/c/en/us/td/docs/security/security_management/cisco_security_manager/security_manager/414/user/guide/CSMUserGuide.html
 
 
-Cisco Security Manaer 4.14 Installation Guide
+Cisco Security Manager 4.14 Installation Guide
 
 http://www.cisco.com/c/en/us/td/docs/security/security_management/cisco_security_manager/security_manager/414/installation/guide/IG.html
