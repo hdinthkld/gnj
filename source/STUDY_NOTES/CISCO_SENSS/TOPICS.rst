@@ -12,14 +12,14 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
 1.0 Threat Defense (25%)
 
-  1.1 Implement firewall (ASA or IOS depending on which supports the implementation)
+  :ref:`1.1 Implement firewall (ASA or IOS depending on which supports the implementation) <cisco_firewall>`
 
-  1.1.a Implement ACLs on :ref:`IOS <cisco_iosfw_rules>`, :ref:`ZBFW <cisco_zbfw_rules>`
+  1.1.a Implement ACLs on :ref:`IOS <cisco_iosfw>`, :ref:`ZBFW <cisco_zbfw>`
   and :ref:`ASA <cisco_asafw_rules>`
 
-  :strikethrough:`1.1.b Implement static/dynamic NAT/PAT`
+  1.1.b Implement static/dynamic NAT/PAT
 
-  :strikethrough:`1.1.c Implement object groups`
+  :ref:`1.1.c Implement object groups <cisco_asa_objectgroups>`
 
   1.1.d Describe threat detection features
 
@@ -70,9 +70,9 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
     2.4.b Device Management
 
-  :strikethrough:`2.5 Implement Device Managers`
+    2.5 Implement Device Managers
 
-    :strikethrough:`2.5.a Implement ASA firewall features using ASDM`
+    2.5.a Implement ASA firewall features using ASDM
 
 3.0 Management Services on Cisco Devices (12%)
 
@@ -96,24 +96,23 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
 4.1 Monitor firewall using analysis of packet tracer, packet capture, and syslog
 
-  :strikethrough:`4.1.a Analyze packet tracer on the firewall using CLI/ASDM`
+  4.1.a Analyze packet tracer on the firewall using CLI/ASDM
 
-  :strikethrough:`4.1.b Configure and analyze packet capture using CLI/ASDM`
+  4.1.b Configure and analyze packet capture using CLI/ASDM
 
-  :strikethrough:`4.1.c Analyze syslog events generated from ASA`
-
+  4.1.c Analyze syslog events generated from ASA
 
 5.0 Threat Defense Architectures (16%)
 
   5.1 Design a Firewall Solution
 
-    :strikethrough:`5.1.a High-availability`
+    5.1.a High-availability
 
-    :strikethrough:`5.1.b Basic concepts of security zoning`
-    
-    :strikethrough:`5.1.c Transparent & Routed Modes`
-    
-    :strikethrough:`5.1.d Security Contexts`
+    5.1.b Basic concepts of security zoning
+
+    5.1.c Transparent & Routed Modes
+
+    5.1.d Security Contexts
 
   5.2 Layer 2 Security Solutions
 

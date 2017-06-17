@@ -34,10 +34,32 @@ to their respective IP addressing version (IPv4 and IPv6 respectively).
 
 Although the new features allow the specifying of an IPv4 and and IPv6
 destination (and vice versa), communication between these devices will only
-work if NAT46/NAT64 has been configured to map the addresses to a valid 
+work if NAT46/NAT64 has been configured to map the addresses to a valid
 address in the other IP version.  Without NAT46/NAT64 the commands are still
 valid but only communication betwee the same IP versions will function
 correctly.
+
+
+.. _cisco_asa_objectgroups:
+
+Objects and Object Groups
+=========================
+
+Objects can be used to make a firewall configuration more readable by
+giving the various host IPs, subnets, ranges as well as service ports a
+readable name that will be easier to reference for the administrator.
+
+Objects can also be used to define a NAT rule along with the real IP where
+the configuration needed is very basic.  This is called an Object or Auto NAT.
+
+Object Groups can be used to combine multiple related hosts, networks or
+services together ino a single entity. Doing this will make the firewall
+rulebase more managable in the long term as well as aligning the firewall
+policy with the organisations documented security policy.
+
+Different types of Objects and Object Groups exist (namely service and network),
+it is not possible to mix these two different types together but they can be
+used in the same access control entity where permitted.
 
 Implementation
 ==============

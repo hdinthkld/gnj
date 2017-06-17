@@ -150,5 +150,3 @@ To see the statistics for a specific zone pair, use the following command:
 .. code-block::
 
   show policy-map type inspect zone-pair <zone-pair-name>
-
-
