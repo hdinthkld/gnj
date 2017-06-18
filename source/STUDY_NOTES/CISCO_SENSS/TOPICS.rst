@@ -63,7 +63,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
     2.3.b Device Management
 
-  2.4 Describe Cisco Security Manager (CSM)
+  :ref:`2.4 Describe Cisco Security Manager (CSM) <cisco_csm>`
 
     2.4.a Functions and use cases of CSM
 
