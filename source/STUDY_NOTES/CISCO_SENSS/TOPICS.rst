@@ -57,7 +57,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   2.2 Implement RBAC on the ASA/IOS using CLI and ASDM
 
-  2.3 Describe Cisco Prime Infrastructure
+  :ref:`2.3 Describe Cisco Prime Infrastructure <cisco_prime_infrastructure>`
 
     2.3.a Functions and use cases of Cisco Prime
 
