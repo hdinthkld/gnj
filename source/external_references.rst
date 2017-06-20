@@ -25,3 +25,8 @@ Sphinx
 
 .. |sphinx_docs_title| replace:: Official Sphinx Documentation
 .. |sphinx_docs_url| replace:: http://www.sphinx-doc.org/en/stable/contents.html
+
+.. [c1] ASA Packet Captures with CLI and ASDM Configuration Example
+   (Cisco, August 18, 2015)
+
+   http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/118097-configure-asa-00.html
