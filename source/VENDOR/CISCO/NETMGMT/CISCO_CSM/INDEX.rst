@@ -56,7 +56,7 @@ indicators of the network security infrastructure.
 An API-Based interface is also available to assist with interating into
 other network services such as Compliance and security analysis sytems.
 
-CSM can be deployed in a high-availabity setup either for local HA or 
+CSM can be deployed in a high-availabity setup either for local HA or
 Disaster Recovery.  This solution is based on the Symantec Veritas
 Storage Foundation and High Availability Solutions. Note that direct
 access to PRSM from Security Manager using SSO is only supported in
@@ -96,8 +96,7 @@ Versions and Licensing
 As of June 2017 the latest available release of CSM is 4.14
 
 It is a available in 3 different versions (Standard, Professional and
-the UCS server bundle). 
-
+the UCS server bundle).
 
 The standard version is intended to manage less than 25 devices and
 supports the most common devices found in a small-to-medium enterprise
@@ -115,7 +114,7 @@ with additional incremental licenses available the same size blocks.
 
 Both of the above versions require an available hardware platform that
 is running at least Windows Server 2008 Enterprise R2 with a recommended
-16GB of RAM, 4-core CPU and 500GB HDD.  
+16GB of RAM, 4-core CPU and 500GB HDD.
 
 The final version is the UCS server bundle (UCS C220 M3). It provides
 all the same features as Professional with the ability to manage 50 to
@@ -142,16 +141,20 @@ invventory.
 Server System Requirements
 --------------------------
 
-These requirements are based on CSM 4.14
+For CSM versions upto 4.8, the server must be running a supported operating
+system, currently:
+* Windows Server 2008 R2 SP1 Enterprise 64-Bit (CSM 4.7 and below)
+* Windows Server 2012 Standard/Datacente 64-bit
 
-The server must be running a supported operating system. Windows
-2012/2016 (64-bit only)  
+For CSM versions 4.9 and above:
+* Windows Server 2012 Standard/Datacentre (R1 an R2) 64-bit
+* Windows Server 2016 Standard/Datacentre 64-bit
 
 The system should have a Quadcore Xeon 5R6500 series or abbove.
 
 In order to run will all features 16GB of RAM is needed. Services such
 as Event Management and Report Management are affected if less memory
-is detected.  
+is detected.
 
 When less than 8GB of RAM is available the Event Management
 and Report Manager are automatically disabled.  Between 8 and 12GB the
