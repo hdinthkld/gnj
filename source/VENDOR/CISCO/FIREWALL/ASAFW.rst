@@ -8,5 +8,9 @@ Cisco ASA Firewall
   :titlesonly:
   :maxdepth: 2
 
+  ASA/MANAGEMENT
+  ASA/MONITORING
   ASA/ACL
+  ASA/NAT
   ASA/THREATDETECT
+  ASA/TROUBLESHOOTING

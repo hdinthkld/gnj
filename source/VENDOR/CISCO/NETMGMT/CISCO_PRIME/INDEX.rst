@@ -53,6 +53,43 @@ As of version 3.0, PI includes:
 * Data Centre Management
 * APIC-EM Integration
 
+Workflow Lifecycle
+------------------
+
+*Don't Disregard Others Right Away* - Memorable Phase
+
+.. image:: /_static/cisco_pi_lifecycle_workflow.jpg
+
+* **Design** - Assess, plan, and create configurations required to roll out new
+  network services and technologies. Create templates used for monitoring key
+  network resources, devices, and attributes. Default templates and best
+  practice designs are provided for quick out-of-the-box implementation
+  automating the work required to use Cisco validated designs and best
+  practices.
+
+* **Deploy** - Schedule the rollout and implementation of network changes.
+  Changes may include published templates created in the design phase, software
+  image updates, and support for user-initiated ad hoc changes and compliance
+  updates. This accelerates service rollout, minimizes chances for errors, and
+  is highly scalable.
+
+* **Operate** - Predefined dashboards provide up-to-date status monitoring on the
+  overall health of the network. Simple one-click workflows and 360-degree
+  device views enhance troubleshooting and reduce the time to resolve network
+  issues. Unified alarm displays with detailed forensics provide actionable
+  information and the ability to automatically open service requests with the
+  Cisco Technical Assistance Center (TAC).
+
+* **Report** - Provides a wide variety of predefined reports for up-to-date
+  information on the network including detailed inventory, configuration,
+  compliance, audit, capacity, end-of-sale, security vulnerabilities, and many
+  more.
+
+* **Administer** - Provides an easy-to-use set of workflows that help to
+  maintain the health of the application and keep devices, users, and the
+  software up to date, allowing the IT staff to focus on other
+  important activities.
+
 Versions
 --------
 
