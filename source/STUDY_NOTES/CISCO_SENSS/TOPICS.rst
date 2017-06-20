@@ -53,7 +53,8 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
   1.3.c Firewalls
 
 2.0 Cisco Security Devices GUIs and Secured CLI Management (25%)
-  2.1 Implement SSHv2, HTTPS, and SNMPv3 access on the network devices
+  2.1 Implement
+  :ref:`SSHv2 <cisco_ssh>`, HTTPS, and SNMPv3 access on the network devices
 
   2.2 Implement RBAC on the ASA/IOS using CLI and ASDM
 
