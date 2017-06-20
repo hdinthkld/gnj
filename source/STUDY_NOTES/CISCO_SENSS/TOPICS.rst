@@ -56,7 +56,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
   2.1 Implement
   :ref:`SSHv2 <cisco_ssh>`, HTTPS, and SNMPv3 access on the network devices
 
-  2.2 Implement RBAC on the ASA/IOS using CLI and ASDM
+  :ref:`2.2 Implement RBAC on the ASA/IOS using CLI and ASDM <cisco_rbac>`
 
   :ref:`2.3 Describe Cisco Prime Infrastructure <cisco_prime_infrastructure>`
 
@@ -94,11 +94,12 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
 4.0 Troubleshooting, Monitoring and Reporting Tools (10%)
 
-4.1 Monitor firewall using analysis of packet tracer, packet capture, and syslog
+4.1 Monitor firewall using analysis of packet tracer,
+:ref:`packet capture <cisco_asa_packet_capture>`, and syslog
 
-  4.1.a Analyze packet tracer on the firewall using CLI/ASDM
+  :ref:`4.1.a Analyze packet tracer on the firewall using CLI/ASDM <cisco_asa_packet_capture>`
 
-  4.1.b Configure and analyze packet capture using CLI/ASDM
+  :ref:`4.1.b Configure and analyze packet capture using CLI/ASDM <cisco_asa_packet_capture>`
 
   4.1.c Analyze syslog events generated from ASA
 

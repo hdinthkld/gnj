@@ -30,3 +30,8 @@ Sphinx
    (Cisco, August 18, 2015)
 
    http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/118097-configure-asa-00.html
+
+.. [c2] Cisco Nexus 7000 Series NX-OS Security Configuration Guide, Release 4.1
+   (Cisco, October 31, 2013)
+
+   http://www.cisco.com/c/en/us/td/docs/switches/datacenter/sw/4_1/nx-os/security/configuration/guide/sec_nx-os-cfg/sec_rbac.html#wp1454261

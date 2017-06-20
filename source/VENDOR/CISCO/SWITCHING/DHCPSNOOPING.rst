@@ -49,6 +49,15 @@ ports match.
 A number of other features (such as DAI) can make use of the DHCP snooping database in order
 to secure the network further.
 
+Features
+========
+
+* DHCP Snooping disabled by default on all VLANs
+* MAC Address Verification **enabled by default**
+* Relay Agent disabled by default
+* Information Option (Option 82) enabled by default
+* All interfaces untrusted by default
+* Host Tracking is disabled by default
 
 Implementation
 ==============
