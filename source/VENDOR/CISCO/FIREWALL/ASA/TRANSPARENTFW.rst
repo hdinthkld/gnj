@@ -51,6 +51,8 @@ Limitations
 
 * No Dynamic DNS
 
+* Unified Communications is not supported
+
 Implementation
 ==============
 
