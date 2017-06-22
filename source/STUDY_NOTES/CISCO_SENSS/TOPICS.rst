@@ -22,7 +22,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   :ref:`1.1.d Describe threat detection features <cisco_asa_threatdetection>`
 
-  1.1.e Implement botnet traffic filtering
+  1.1.e :ref:`Implement botnet traffic filtering <cisco_asa_botnet>`
 
   1.1.f Configure application filtering and protocol inspection
 
@@ -112,7 +112,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
     5.1.b Basic concepts of security zoning
 
     5.1.c
-    :ref:`Transparent <cisco_transparent_fw>` & 
+    :ref:`Transparent <cisco_transparent_fw>` &
     Routed Modes
 
     5.1.d Security Contexts
