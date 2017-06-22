@@ -55,7 +55,7 @@ Features
 * DHCP Snooping disabled by default on all VLANs
 * MAC Address Verification **enabled by default**
 * Relay Agent disabled by default
-* Information Option (Option 82) enabled by default
+* Information Option (Option 82) enabled by default on IOS (disabled on NX-OS)
 * All interfaces untrusted by default
 * Host Tracking is disabled by default
 

@@ -35,3 +35,9 @@ Sphinx
    (Cisco, October 31, 2013)
 
    http://www.cisco.com/c/en/us/td/docs/switches/datacenter/sw/4_1/nx-os/security/configuration/guide/sec_nx-os-cfg/sec_rbac.html#wp1454261
+
+.. [c3] CLI Book 1: Cisco ASA Series General Operations CLI Configuration Guide, 9.6
+  (Cisco, May 16, 2017)
+  http://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/general/asa-96-general-config/intro-fw.html
+
+  
