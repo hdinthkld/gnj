@@ -50,7 +50,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   1.3.b Switches
 
-  1.3.c Firewalls
+  :ref:`1.3.c Firewalls <cisco_asa_hardening>`
 
 2.0 Cisco Security Devices GUIs and Secured CLI Management (25%)
   2.1 Implement

@@ -244,7 +244,7 @@ on the transparent firewall can be slowly built up until all traffic is
 accounted for, at which point for more substantial change can be planned to
 move to routed firewall model.
 
-Firewall Polcy Management
+Firewall Policy Management
 =========================
 
 Policy Enforcement
@@ -338,3 +338,16 @@ it isn't something that would be needed at quick glance.
 A regular firewall review may take place to ensure that all rules are still
 needed and this is where the requestor information is useful but it is not
 something that would be helpful when troubleshooting an issue.
+
+Firewall Management Plane Hardening Best Practice
+=================================================
+
+The following lists the most basic actions to take in order to secure
+the management of a Firewall:
+
+* Use HTTPS and SSH for device access instead of HTTP and Telnet where possible
+* Configure logging for all actions performed
+* Configure AAA for role-based access control
+* Use a local fallback account in case AAA server is unreachable
+* Use NTP to synchronize the time
+* Authenticate routing neighbors and log neighbor changes
