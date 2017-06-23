@@ -1,4 +1,4 @@
-.. _cisco_asafw
+.. _cisco_asafw:
 
 ==================
 Cisco ASA Firewall
