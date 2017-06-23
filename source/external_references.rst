@@ -53,3 +53,8 @@ Sphinx
 .. [c6] Release 15.1SY Supervisor Engine 2T Software Configuration Guide - DAI
    (Cisco, August 15 2016)
    http://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/15-1SY/config_guide/sup2T/15_1_sy_swcg_2T/dynamic_arp_inspection.html
+
+
+.. [c7] Catalyst 4500 Series Switch Software Configuration Guide, Release IOS XE 3.3.0SG and IOS 15.1(1)SG
+  (Cisco, Date unknown)
+  http://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/15-1/XE_330SG/configuration/guide/config/swmacsec.html

@@ -40,9 +40,9 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   :ref:`1.2.d Configure port security <cisco_portsecurity>`
 
-  1.2.e Describe common Layer 2 threats and attacks and mitigation
+  :ref:`1.2.e Describe common Layer 2 threats and attacks and mitigation <cisco_common_attack_defences>`
 
-  1.2.f Describe MACSec
+  :ref:`1.2.f Describe MACSec <cisco_macsec>`
 
   1.2.g Configure IP source verification
 

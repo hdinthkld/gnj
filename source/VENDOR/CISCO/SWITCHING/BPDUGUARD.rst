@@ -1,3 +1,5 @@
+.. _cisco_bpduguard:
+
 ###########################
 Cisco BPDU Guard and Filter
 ###########################
@@ -26,7 +28,7 @@ network topologies where the root bridge is seen through a low bandwidth port or
 Another issue is that some cheap hubs (and switches) don't correctly implement the spanning
 tree protocol and can cause loops in the network where more than one cable from the rogue
 device is connected to the managed network via two seperate cables.  In practice either
-the managed switch or the rogue switch should disable one of its ports to prevent the 
+the managed switch or the rogue switch should disable one of its ports to prevent the
 loop but this doesn't always happen (and hubs don't even know how).
 
 BPDU Guard
@@ -34,10 +36,10 @@ BPDU Guard
 
 
 Cisco has created an enhacement to deal with the first issue known as BPDU Guard.  A second
-feature know as Loop Guard which helps deal with the second issue will be discussed 
+feature know as Loop Guard which helps deal with the second issue will be discussed
 seperately.
 
-Unlike with Root Guard, the BPDU Guard features don't given any consideration to the 
+Unlike with Root Guard, the BPDU Guard features don't given any consideration to the
 values in the BPDU. If any BPDU is seen on a port with BPDU Guard enabled, it is immediately
 put into the *errdisable* state. When this occurs a syslog message is logged to alert
 the network team:
@@ -77,7 +79,7 @@ port which has PortFast enabled should generally be an end user device, not a sw
 if a user were to plug a switch into the port it is correct that the port should be
 disabled and the network team notified so they can take corrective action.
 
-To enable BPDU Guard/Filter on all ports that have PortFast enabled, use the following 
+To enable BPDU Guard/Filter on all ports that have PortFast enabled, use the following
 command:
 
 .. code-block:: none
@@ -116,5 +118,3 @@ To confirm if BPDU Guard has been enabled, use this command:
 .. code-block:: none
 
   show spanning-tree summary totals
-
-

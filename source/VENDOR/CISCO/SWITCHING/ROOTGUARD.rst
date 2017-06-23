@@ -1,8 +1,8 @@
+.. _cisco_rootguard:
+
 ################
 Cisco Root Guard
 ################
-
-.. _cisco_rootguard_overview:
 
 Overview
 --------
@@ -13,8 +13,8 @@ the location of the root bridge and any switch with the lowest bridge ID will tr
 take on this role. Without some additional controls the administrator cannot enforce the
 position of the root bridge.
 
-Cisco has added an enhancement called Root Guard to the Spanning Tree Protocol which gives 
-administrators a means by which to say where the root bridge is expected to be. This feature 
+Cisco has added an enhancement called Root Guard to the Spanning Tree Protocol which gives
+administrators a means by which to say where the root bridge is expected to be. This feature
 ensures that the port on which root guard is enabled is the designated port. Normally root
 bridge ports are all designated ports.
 
@@ -37,7 +37,7 @@ so that monitoring and alerting systems can detect the event:
 Implementation
 --------------
 
-Root Guard is enabled on a per port basis and should be configured on all ports where 
+Root Guard is enabled on a per port basis and should be configured on all ports where
 superior BPDUs are not expected to be seen.  An example of this would be all the ports where
 end user devices are connected and those that connect to unmanaged/3rd party switches. It
 can be imagined as setting up a perimeter around the network where the STP root should be
@@ -62,7 +62,7 @@ This becomes more difficult when two potential root bridges are used for high av
 topologies that follow best practice (such as the Hierarchical Switch Design from Cisco) can
 make it easier to identify where Root Guard should be deployed.
 
-In a basic sense ensure that the root BPDUs never have to traverse a non-managed switch or 
+In a basic sense ensure that the root BPDUs never have to traverse a non-managed switch or
 user enabled port. Ports between Access, Distribution and Core devices switches should be
 the only places where Root Guard is not deployed unless there is good reason not to.
 
@@ -90,5 +90,3 @@ http://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/1
 **Roger Perkin - Spanning Tree Root Guard**
 
 http://www.rogerperkin.co.uk/spanning-tree/spanning-tree-root-guard/
-
-

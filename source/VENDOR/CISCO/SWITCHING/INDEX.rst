@@ -8,6 +8,7 @@ Cisco Switching Features
   :maxdepth: 1
   :titlesonly:
 
+  COMMON_ATTACK_DEFENCES
   DTP
   VTP
   ISL
