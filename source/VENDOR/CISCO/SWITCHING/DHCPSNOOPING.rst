@@ -46,8 +46,7 @@ An optional feature that can be enabled is MAC Address Verification. This featur
 that the source MAC address and the client hardware address in the DHCP packets on untrusted
 ports match.
 
-A number of other features (such as DAI) can make use of the DHCP snooping database in order
-to secure the network further.
+A number of other features (such as :ref:`DAI <cisco_dai>`) can make use of the DHCP snooping database in order to secure the network further.
 
 Features
 ========

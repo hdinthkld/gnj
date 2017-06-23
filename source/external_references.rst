@@ -48,3 +48,8 @@ Sphinx
 .. [c5] Cisco SAFE Reference Guide
   (cisco, December 10 2013)
   http://www.cisco.com/c/en/us/td/docs/solutions/Enterprise/Security/SAFE_RG/SAFE_rg.html
+
+
+.. [c6] Release 15.1SY Supervisor Engine 2T Software Configuration Guide - DAI
+   (Cisco, August 15 2016)
+   http://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/15-1SY/config_guide/sup2T/15_1_sy_swcg_2T/dynamic_arp_inspection.html

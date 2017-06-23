@@ -1,3 +1,5 @@
+.. _cisco_ccnp_senss:
+
 ###############################################################################
 Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 ###############################################################################
@@ -32,7 +34,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   :ref:`1.2.a Configure DHCP snooping <cisco_dhcp_snooping>`
 
-  1.2.b Describe dynamic ARP inspection
+  :ref:`1.2.b Describe dynamic ARP inspection <cisco_dai>`
 
   1.2.c Describe storm control
 
