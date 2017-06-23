@@ -133,7 +133,7 @@ For example, if the number of messages is set to 12 and the interval is set to 2
 
 The types of log entries can also be controlled as follows:
 
-.. code-block::
+.. code-block:: none
 
   ip arp inspection vlan <vlan-range> logging {acl-match {matchlog | none} | dhcp-bindings {all | none | permit}}
 
