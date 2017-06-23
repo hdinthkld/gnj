@@ -2,7 +2,7 @@
 Cisco Switch Security Features
 ==============================
 
-.. toctree:: 
+.. toctree::
   :maxdepth: 1
   :titlesonly:
 
@@ -18,5 +18,4 @@ Cisco Switch Security Features
   DAI
   STORMCONTROL
   MACSEC
-  IPSOURCEVERIFY
-
+  SOURCEGUARD

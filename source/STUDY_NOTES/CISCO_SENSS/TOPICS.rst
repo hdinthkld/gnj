@@ -36,7 +36,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   :ref:`1.2.b Describe dynamic ARP inspection <cisco_dai>`
 
-  1.2.c Describe storm control
+  :ref:`1.2.c Describe storm control <cisco_stormcontrol>`
 
   :ref:`1.2.d Configure port security <cisco_portsecurity>`
 
@@ -44,7 +44,7 @@ Cisco CCNP - Implementing Cisco Edge Network Security Solutions (300-206 SENSS)
 
   :ref:`1.2.f Describe MACSec <cisco_macsec>`
 
-  1.2.g Configure IP source verification
+  :ref:`1.2.g Configure IP source verification <cisco_sourceguard>`
 
 1.3 Configure device hardening per best practices
 
