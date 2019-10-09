@@ -102,3 +102,4 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH)
 
 Raw Notes
 :ref:`Enterprise Campus Network Design <ccnp_switch_campus_design>`
+:ref:`Switch Operation <ccnp_switch_switch_operation>`
