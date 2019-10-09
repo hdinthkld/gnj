@@ -1,3 +1,5 @@
+.. _ccnp_switch_campus_design:
+
 ****************************************
 Cisco - Enterprise Campus Network Design
 ****************************************

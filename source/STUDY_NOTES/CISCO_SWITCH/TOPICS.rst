@@ -93,9 +93,12 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH)
 3.0 Infrastructure Services (15%)
 
   3.1 Configure and verify first-hop redundancy protocols
-  
+
     3.1.a HSRP
     
     3.1.b VRRP
     
     3.1.c GLBP
+
+Raw Notes
+* :ref:`Enterprise Campus Network Design <ccnp_switch_campus_design>`
