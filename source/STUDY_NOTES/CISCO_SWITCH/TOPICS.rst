@@ -107,3 +107,5 @@ Raw Notes
 :ref:`Enterprise Campus Network Design <ccnp_switch_campus_design>`
 
 :ref:`Switch Operation <ccnp_switch_switch_operation>`
+
+:ref:`Switch Port Configuration <ccnp_switch_switch_port_config>`
