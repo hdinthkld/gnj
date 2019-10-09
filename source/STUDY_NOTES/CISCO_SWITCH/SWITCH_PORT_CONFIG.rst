@@ -182,3 +182,131 @@ Troubleshooting Port Connectivity
   * Input" errors usually show
   * Check if running at half-duplex, indicating unsuccessful auto-negotiation
 
+Discovering Connected Devices
+=============================
+
+Cisco Discovery Protocol
+------------------------
+
+- Automated method for devices to advertise prescense to directly connected neighbors
+- Cisco propietary feature
+- One-Way, no response expected
+- Sent at the Data Link Layer (Layer 2) every 60 seconds
+
+- Information advertised
+
+  * Hostname
+  * Connected Interface
+  * Device Capabilities
+  * Hardware Platform
+  * Software Version
+  * Duplex Mode
+  * Power Info
+  * Management IP(s)
+
+- Cisco routers and switches have CDP enabled by default
+
+- See advertised neighbours
+
+``show cdp neighbors [<interface-name>] [detail]``
+
+- Disable/Enable CDP globally on the switch
+
+`` [no] cdp run ``
+
+- Disable/Enable CDP per interface
+
+`` [no] cdp enable ``
+
+- View CDP info for named device
+
+`` show cdp entry <name> ``
+
+
+Link Layer Discovery Protocol
+-----------------------------
+
+- Based on IEEE 802.1ab
+- Supported By Multiple Vendors
+- Extendable through Type-Length-Values (TLV) structures
+- Specific Media Endpoint TLVs (LLDP-MED)
+- Must use either bbasic LLDP or LLDP-MED per interface, not both
+- By default globally disabled
+
+- Globally disable/enable LLDP
+
+`` [no] lldp run ``
+
+- Display LLDP Advertisements Received
+
+`` show lldp neighbors [<interface-name>] ``
+
+- Disable/Enable LLDP Per interface
+
+`` [no] lldp {receive | transmit} ``
+
+Using Power Over Ethernet (POE)
+===============================
+
+- PoE can be used to provide power to IP phones and wireless access points (WAPs)
+- Provide a means of centralised power management, unlike using individual wall warts
+- PoE can be managed, monitored and offerred only to known devices
+- Best Practice: Connect switch to UPS so power can be maintained in the event of a power outage
+
+How PoE Works
+-------------
+
+- Switches must be rated to supply power to external devices
+- PoE methods
+
+  * Cisco Inlne Power (ILP) - Cisco proprietary upto 7W
+  * IEEE 802.3AF (PoE) up to 15.4W
+  * IEEE 802.3AT (PoE+) up to 25.5W
+  * Cisco Universal Power (UPoE) - Cisco propertiary up to 60W
+
+Detecting A Powered Device
+--------------------------
+
+- Power is disabled when port is down
+- Small voltage is sent across transmit/receive pairs
+- Resistance is measured and if detected a device must be present
+- Resistance values determine a specific power clauses
+
+  * Class 0 - Default (15.4W)
+  * Class 1 - 4.0W
+  * Class 2 - 7.0W
+  * Class 3 - 15.4W
+  * Class 4 (802.3AT) - Upto 30W
+
+- Class 0 used when device/switch does not attempt discovery
+- Max of 15.4W is usually offered
+- CDP/LLDP can be used to request power up to 30W
+- Special TLVs used with CDP/LLDP for UPoE (Catalyst 4500 only)
+
+
+Configuring PoE
+---------------
+
+- General Notes
+
+  * By default each port auto-detects if power is needed
+  * If a device requests more power than configued, a log message is generated and port 
+    remains in non-connected state
+
+** Configure Power offered on a port **
+
+``
+power inline auto [max <milliwatts>]
+power inline static
+power inline never
+``
+
+Verifying PoE
+-------------
+
+** Monitor power available/used/total **
+
+`` show power inline [module <member>] [detail] ``
+
+`` show power inline [<interface-name>] [detail] ``
+
