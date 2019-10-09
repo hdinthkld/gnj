@@ -96,7 +96,7 @@ Multi-Layer Switch Operation
   * The control plane includes the RP
   * The data plane exists in the SE
 
-Layer 3 Catalys Switch Decision Process
+Layer 3 Catalyst Switch Decision Process
 =======================================
 
 - Packet is pulled off the ingress queue, inspecte for Layer 2 and Layer 3 destination addresses
@@ -140,21 +140,26 @@ Managing the CAM Table
 ======================
 
 **Show the current contents of the CAM table**
+
 ``
 show mac address-table [<options>] - Recent IOS, not 4500/6500
 show mac-address-table [<options>] - Pror to 12.1(11)EA1
 ``
 
 **Check the size of the CAM Table**
+
 ``show mac address-table count``
 
 **Adjust CAM table time for removing stale elements**
+
 ``mac address-table aging-time <seconds>``
 
 **Add static CAM table entries**
+
 ``mac address-table tatic <MAC> vlan <ID> interface <interface-name>``
 
 **Clearing CAM Table Entries**
+
 ``clear mac address-table dynamic  [<options>]``
 
 Ternary Content Addressable Memory (TCAM)
@@ -185,6 +190,7 @@ Ternary Content Addressable Memory (TCAM)
   * Exceeding the numbber of LOU's require ACE's to be expanded so they only may use of the "eq" operator
 
 - The TCAM cannot be manipulated directly, to see the current utilisation use
+
 ``show platform tcam utilisation``
 
 Managing Switching Table Sizes
