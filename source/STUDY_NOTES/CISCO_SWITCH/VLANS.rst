@@ -202,12 +202,14 @@ VLAN Configuration Commands
 **Create a VLAN**
 
 ::
+
   vlan <id>
     name <string>
 
 **Assign a port to a single vlan (access port)**
 
 ::
+
   interface <name>
     switchport
     switchport access vlan <vlan-id>
@@ -215,54 +217,61 @@ VLAN Configuration Commands
 
 **List VLANs known to the switch and their assigned ports**
 
-``
+::
+
   show vlan [<id>] [brief]
-``
+
 
 ** Configure a VLAN trunk **
 
-``
-interface <name>
-  switchport
-  switchport trunk encapsulation {isl | dot1q |  negotiate}
-  switchport trunk native vlan <id>
-  switchport trunk allowed vlan {<vlan-list> | all | { add | except | remove } <vlan-list>}}
-  switchport mode { trunk | dynamic {desirable | auto}}
-``
+::
+
+  interface <name>
+    switchport
+    switchport trunk encapsulation {isl | dot1q |  negotiate}
+    switchport trunk native vlan <id>
+    switchport trunk allowed vlan {<vlan-list> | all | { add | except | remove } <vlan-list>}}
+    switchport mode { trunk | dynamic {desirable | auto}}
+
 
 
 ** Disable/Enable DTP **
 
-``
-interface <name>
-  switchport trunk encapsulation {isl | dot1q}
-  switchport mode {trunk | access}
-  [no] switchport nonegotiate
-``
+::
+
+  interface <name>
+    switchport trunk encapsulation {isl | dot1q}
+    switchport mode {trunk | access}
+    [no] switchport nonegotiate
+
 
 ** Verify Switch Port configuration and operational state **
 
-``
-show interface <name> switchport
-``
+::
+
+  show interface <name> switchport
+
 
 ** Verify Trunking Information for a port **
 
-``
-show interface <name> trunk
-``
+::
+
+  show interface <name> trunk
+
 
 ** Configure Voice VLAN **
 NOTE: Ensure VLAN has been created first
 
-``
-interface <name>
-  switchport voice vlan {<id> | dot1p | untagged | none}
-``
+::
+
+  interface <name>
+    switchport voice vlan {<id> | dot1p | untagged | none}
+
 
 ** Verify Voice VLAN is carried over the conditioanl trunk **
 
-``
-show interface <name> switchport
-show spanning-tree interface <name>
-``
+::
+
+  show interface <name> switchport
+  show spanning-tree interface <name>
+
