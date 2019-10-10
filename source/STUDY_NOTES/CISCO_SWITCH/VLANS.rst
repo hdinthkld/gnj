@@ -1,6 +1,6 @@
-****************************************
+************************
 Cisco - VLANs And Trunks
-****************************************
+************************
 
 .. _ccnp_switch_vlans:
 
@@ -27,12 +27,14 @@ VLAN Membership
 ---------------
 
 - Static VLAN
+
   * Port-based where port is manually assigned to a specific VLAN
   * No configuration required on the host
   * Port VLAN ID (PVID)
   * Hardware level switching via ASICs
 
 - Dynamic VLAN
+
   * Ports assigned to VLAN based on the connected hosts MAC address
   * Requires external database hosted on a VLAN Membership Policy Server (VMPS)
   * Flexibiliy and Mobility
@@ -61,22 +63,23 @@ Deploying VLANs
   * Limits Failure domain
 
 - VLAN scaling methods
+
   * End-To-End VLANs
   * Local VLANs
 
-  End-To-End VLANs
-  ----------------
+End-To-End VLANs
+----------------
 
-  - Campus wide, spans entire switch fabric
-  - Maximum Flexibility and Mobility
-  - Users not tied to physical location
-  - VLAN must be available at access layer of every switch block
-  - VLAN must be available on Core Layer
-  - Users should have same traffic flow patterns 
-  - 80/20 Rule - 80% traffic stays in workgroup, 20% remote
-  - Not recommended unless good reason
-  - Broadcasts are carried across entire switch fabric
-  - Broadcast storm or Layer 2 bridging issue could affect entire network
+- Campus wide, spans entire switch fabric
+- Maximum Flexibility and Mobility
+- Users not tied to physical location
+- VLAN must be available at access layer of every switch block
+- VLAN must be available on Core Layer
+- Users should have same traffic flow patterns 
+- 80/20 Rule - 80% traffic stays in workgroup, 20% remote
+- Not recommended unless good reason
+- Broadcasts are carried across entire switch fabric
+- Broadcast storm or Layer 2 bridging issue could affect entire network
 
 Local VLANS
 -----------
@@ -184,7 +187,7 @@ Wireless VLANs
 Autonomous APs
 --------------
 
-- Indendent operational
+- Independant operational
 - Connects VLAN to WLAN one-to-one
 - Requires a trunk link where multiple WLAN/VLAN mappings are used
 
@@ -221,8 +224,7 @@ VLAN Configuration Commands
 
   show vlan [<id>] [brief]
 
-
-** Configure a VLAN trunk **
+**Configure a VLAN trunk**
 
 ::
 
@@ -233,9 +235,7 @@ VLAN Configuration Commands
     switchport trunk allowed vlan {<vlan-list> | all | { add | except | remove } <vlan-list>}}
     switchport mode { trunk | dynamic {desirable | auto}}
 
-
-
-** Disable/Enable DTP **
+**Disable/Enable DTP**
 
 ::
 
@@ -244,23 +244,22 @@ VLAN Configuration Commands
     switchport mode {trunk | access}
     [no] switchport nonegotiate
 
-
-** Verify Switch Port configuration and operational state **
+**Verify Switch Port configuration and operational state**
 
 ::
 
   show interface <name> switchport
 
 
-** Verify Trunking Information for a port **
+**Verify Trunking Information for a port**
 
 ::
 
   show interface <name> trunk
 
+**Configure Voice VLAN**
 
-** Configure Voice VLAN **
-NOTE: Ensure VLAN has been created first
+*NOTE: Ensure VLAN has been created first*
 
 ::
 
@@ -268,10 +267,9 @@ NOTE: Ensure VLAN has been created first
     switchport voice vlan {<id> | dot1p | untagged | none}
 
 
-** Verify Voice VLAN is carried over the conditioanl trunk **
+**Verify Voice VLAN is carried over the conditioanl trunk**
 
 ::
 
   show interface <name> switchport
   show spanning-tree interface <name>
-
