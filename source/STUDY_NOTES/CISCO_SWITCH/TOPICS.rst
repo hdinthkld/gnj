@@ -8,6 +8,10 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH)
    
    Study Notes <NOTES>
 
+
+CCNP Switch - Exam Objectives
+==============================
+
 1.0 Layer 2 Topics (65%)
 
   1.1 Configure and verify switch administration
@@ -101,15 +105,3 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH)
     3.1.b VRRP
     
     3.1.c GLBP
-
-
-Raw Notes
-=========
-
-:ref:`Enterprise Campus Network Design <ccnp_switch_campus_design>`
-
-:ref:`Switch Operation <ccnp_switch_switch_operation>`
-
-:ref:`Switch Port Configuration <ccnp_switch_switch_port_config>`
-
-:ref:`VLANs And Trunks <ccnp_switch_vlans>`

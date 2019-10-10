@@ -242,7 +242,7 @@ Per-VLAN Spanning Tree (PVST)
 - Requires use of ISL trunk encapsulation
 - Interoperability issues with CST
 
-Per-VLAN Spanning Tree Pls (PVST+)
+Per-VLAN Spanning Tree (PVST+)
 ----------------------------------
 
 - Cisco Proprietary
