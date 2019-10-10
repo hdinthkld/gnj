@@ -5,6 +5,8 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH)
 .. toctree::
    :titlesonly:
    :caption: Contents:
+   
+   NOTES
 
 1.0 Layer 2 Topics (65%)
 
@@ -109,3 +111,5 @@ Raw Notes
 :ref:`Switch Operation <ccnp_switch_switch_operation>`
 
 :ref:`Switch Port Configuration <ccnp_switch_switch_port_config>`
+
+:ref:`VLANs And Trunks <ccnp_switch_vlans>`

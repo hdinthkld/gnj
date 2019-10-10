@@ -209,9 +209,11 @@ Managing Switching Table Sizes
   * Indirect-Ipv4-And-IPv6
 
 - Display the current table sizes
+
 ``show sdm prefer``
 
 - Change the current template (requires reboot)
+
 ``sdm prefer <template-name>``
 
 Media Access Control (MAC) Addresses
