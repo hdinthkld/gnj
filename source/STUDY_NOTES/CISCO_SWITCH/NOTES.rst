@@ -14,3 +14,4 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH) - Study No
   Traditional Spanning Tree Protocol <STP>
   Spanning Tree Configuration <STPCONFIG>
   Advanced Spanning Tree Protocol <STPADV>
+  Aggregating Switch Links <AGGLINKS>
