@@ -201,19 +201,17 @@ VLAN Configuration Commands
 
 **Create a VLAN**
 
-``
-vlan <id>
-  name <string>
-``
+::
+  vlan <id>
+    name <string>
 
 **Assign a port to a single vlan (access port)**
 
-``
-interface <name>
-  switchport
-  switchport access vlan <vlan-id>
-  switchport mode access  
-``
+::
+  interface <name>
+    switchport
+    switchport access vlan <vlan-id>
+    switchport mode access  
 
 **List VLANs known to the switch and their assigned ports**
 
