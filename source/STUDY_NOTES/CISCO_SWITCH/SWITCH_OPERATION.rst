@@ -5,7 +5,7 @@ Cisco - Switch Operation
 .. _ccnp_switch_switch_operation:
 
 Layer 2 Operation On Legacy Networks
-===========================================
+====================================
 
 - A Network where all hosts share the same bandwiddth is called a shared media network.
   Used in legacy netwroks with hubs and CSMA/CD Scheme
