@@ -127,7 +127,6 @@ Any of the list below are processed more slowing in software
 - Packets requiring NAT
 - Legacy Multiprotocol Packets (IPX, Appletalk, etc)
 
-
 Content Addressessable Memory (CAM)
 ===================================
 
@@ -141,26 +140,35 @@ Managing the CAM Table
 
 **Show the current contents of the CAM table**
 
-``
-show mac address-table [<options>] - Recent IOS, not 4500/6500
-show mac-address-table [<options>] - Pror to 12.1(11)EA1
-``
+::
+
+  show mac address-table [<options>] - Recent IOS, not 4500/6500
+  show mac-address-table [<options>] - Pror to 12.1(11)EA1
+
 
 **Check the size of the CAM Table**
 
-``show mac address-table count``
+::
+
+  show mac address-table count
 
 **Adjust CAM table time for removing stale elements**
 
-``mac address-table aging-time <seconds>``
+::
+
+  mac address-table aging-time <seconds>
 
 **Add static CAM table entries**
 
-``mac address-table tatic <MAC> vlan <ID> interface <interface-name>``
+::
+
+  mac address-table tatic <MAC> vlan <ID> interface <interface-name>
 
 **Clearing CAM Table Entries**
 
-``clear mac address-table dynamic  [<options>]``
+::
+
+  clear mac address-table dynamic  [<options>]
 
 Ternary Content Addressable Memory (TCAM)
 =========================================
@@ -191,7 +199,9 @@ Ternary Content Addressable Memory (TCAM)
 
 - The TCAM cannot be manipulated directly, to see the current utilisation use
 
-``show platform tcam utilisation``
+::
+  
+  show platform tcam utilisation
 
 Managing Switching Table Sizes
 ==============================
@@ -204,17 +214,22 @@ Managing Switching Table Sizes
   * Switches running at Layer 3 should have a larger FIB table
 
 - The switching database manager (SDM) managed how the switches memory is partitioned and these are defined as templates
+
   * Desktop (Default, Access, VLAN, Routing)
   * Dual-Ipv4-And-IPv6
   * Indirect-Ipv4-And-IPv6
 
 - Display the current table sizes
 
-``show sdm prefer``
+::
+
+  show sdm prefer
 
 - Change the current template (requires reboot)
 
-``sdm prefer <template-name>``
+::
+
+  sdm prefer <template-name>
 
 Media Access Control (MAC) Addresses
 ====================================
@@ -222,11 +237,13 @@ Media Access Control (MAC) Addresses
 - Sometimes called hardware address or burned-in address (BIA)
 
 - Can be assigned by the manufacturer (Globally Unique)
+
   * First 3 octets (24 bits) are the organisationally unique identifier (OUI)
   * Last 3 octets (24 bits) are NIC specific
   * Bit 1 of 1st octet set to 0 (zero) for globally unique
 
-- Can bbe assigned by an organisations admin (Locally Administered)
+- Can be assigned by an organisations admin (Locally Administered)
+
  * Bit 1 of 1st octet set to 1 (onee) for locally administered
 
 - Total size of MAC Address is 4 bits

@@ -102,45 +102,60 @@ Configuring Switch ports
 
 **Selecting a single switch port**
 
-``interface <type> <memmber>/<module>/<number>``
+::
+
+  interface <type> <memmber>/<module>/<number>
 
 **Selecting multiple ports**
 
-``interface range <name> , <name-2> [, <name-x>]``
-`` interface range <name> - <name> ``
+::
+
+  interface range <name> , <name-2> [, <name-x>]
+    <commands>
+
+  or 
+
+  interface range <name> - <name>
+    <commands>
 
 **Using Interface macros**
 
-``
-define interface-range <name> [ , <name> ] [ - <name>]
-interface range macro <name>
-``
+::
+
+  define interface-range <name> [ , <name> ] [ - <name>]
+  interface range macro <name>
+    <commands>
+
 
 **Adding Comments to interfaces**
 
-``
-interface <name>
-  description <one-line-string>
-``
+::
+
+  interface <name>
+    description <one-line-string>
+
 
 **Manually setting port speed**
 
-``
-interface <name>
-  speed {10|100|1000|auto}
-``
+::
+
+  interface <name>
+    speed {10|100|1000|auto}
+
 
 **Manually setting duplex mode**
 
-``
-interface <name>
- duplex {auto|full|half}
-``
+::
+
+  interface <name>
+   duplex {auto|full|half}
+
 
 Managing Error Conditions On Switch Ports
 =========================================
 
-**General notes on error Conditions**
+General notes on error Conditions
+---------------------------------
 
 - Network management applications can poll devices to check for errors
 - Catalyst switches can detect errors an take action automatically
@@ -148,39 +163,52 @@ Managing Error Conditions On Switch Ports
 - By default switch ports must be manually shutdown then restored in order to recover
 - Ports are disabled for 300 seconds by default if automatically error recovery is enabled
 
-** Tune trigger clauses globally **
+**Tune trigger clauses globally**
 
-`` [no] errdisable detect cause {all | <cause>} ``
+::
 
-** Enable Auto Recovery **
+  [no] errdisable detect cause {all | <cause>}
 
-`` errdisable recovery cause {all | <cause>} ``
+**Enable Auto Recovery**
 
-** Change recovery timer **
+::
 
-`` errdisable recovery interval <seconds> ``
+  errdisable recovery cause {all | <cause>}
+
+**Change recovery timer**
+
+::
+
+  errdisable recovery interval <seconds>
 
 Troubleshooting Port Connectivity
 =================================
 
-- Check Port State - Up/Up is expected for normal operation
+**Check Port State - Up/Up is expected for normal operation**
 
-`` show interfaces [<name>]
+::
 
-- Get Summary of all switch port states
+  show interfaces [<name>]
 
-`` show interface status ``
+**Get Summary of all switch port states**
 
-- Show ports in error disabled states
+::
 
-`` show interface status err-disabled ``
+  show interface status
 
-- Checking for speed/duplex mismatches
+**Show ports in error disabled states**
 
-  * Check for error count greater than 0
-  * "Runts" are packets truncated before being fully received
-  * Input" errors usually show
-  * Check if running at half-duplex, indicating unsuccessful auto-negotiation
+::
+
+  show interface status err-disabled
+
+Checking for speed/duplex mismatches
+------------------------------------
+
+- Check for error count greater than 0
+- "Runts" are packets truncated before being fully received
+- Input" errors usually show
+- Check if running at half-duplex, indicating unsuccessful auto-negotiation
 
 Discovering Connected Devices
 =============================
@@ -206,21 +234,29 @@ Cisco Discovery Protocol
 
 - Cisco routers and switches have CDP enabled by default
 
-- See advertised neighbours
+**See advertised neighbours**
 
-``show cdp neighbors [<interface-name>] [detail]``
+::
 
-- Disable/Enable CDP globally on the switch
+  show cdp neighbors [<interface-name>] [detail]
 
-`` [no] cdp run ``
+**Disable/Enable CDP globally on the switch**
 
-- Disable/Enable CDP per interface
+::
 
-`` [no] cdp enable ``
+  [no] cdp run
 
-- View CDP info for named device
+**Disable/Enable CDP per interface**
 
-`` show cdp entry <name> ``
+::
+
+  [no] cdp enable
+
+**View CDP info for named device**
+
+::
+
+  show cdp entry <name>
 
 
 Link Layer Discovery Protocol
@@ -233,17 +269,23 @@ Link Layer Discovery Protocol
 - Must use either bbasic LLDP or LLDP-MED per interface, not both
 - By default globally disabled
 
-- Globally disable/enable LLDP
+**Globally disable/enable LLDP**
 
-`` [no] lldp run ``
+::
 
-- Display LLDP Advertisements Received
+  [no] lldp run
 
-`` show lldp neighbors [<interface-name>] ``
+**Display LLDP Advertisements Received**
 
-- Disable/Enable LLDP Per interface
+::
 
-`` [no] lldp {receive | transmit} ``
+  show lldp neighbors [<interface-name>]
+
+**Disable/Enable LLDP Per interface**
+
+::
+
+  [no] lldp {receive | transmit}
 
 Using Power Over Ethernet (POE)
 ===============================
@@ -293,20 +335,20 @@ Configuring PoE
   * If a device requests more power than configued, a log message is generated and port 
     remains in non-connected state
 
-** Configure Power offered on a port **
+**Configure Power offered on a port**
 
-``
-power inline auto [max <milliwatts>]
-power inline static
-power inline never
-``
+::
+  power inline auto [max <milliwatts>]
+  power inline static
+  power inline never
+
 
 Verifying PoE
 -------------
 
 ** Monitor power available/used/total **
 
-`` show power inline [module <member>] [detail] ``
+::
 
-`` show power inline [<interface-name>] [detail] ``
-
+  show power inline [module <member>] [detail]
+  show power inline [<interface-name>] [detail]
