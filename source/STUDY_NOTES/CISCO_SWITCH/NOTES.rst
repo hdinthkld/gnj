@@ -6,7 +6,8 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH) - Study No
   :maxdepth: 1
   :titlesonly:
 
-  ENTERPRISE_CAMPUS_DESIGN
-  SWITCH_OPERATION
-  SWITCH_PORT_CONFIG
-  VLANS
+  Enterprise Campus Design <ENTERPRISE_CAMPUS_DESIGN>
+  Switch Operation <SWITCH_OPERATION>
+  Switch Port Configiration <SWITCH_PORT_CONFIG>
+  VLANs <VLANS>
+  VLAN Trunking Protocol <VTP>

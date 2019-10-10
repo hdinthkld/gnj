@@ -6,7 +6,7 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH)
    :titlesonly:
    :caption: Contents:
    
-   NOTES
+   Study Notes <NOTES>
 
 1.0 Layer 2 Topics (65%)
 
