@@ -13,3 +13,4 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH) - Study No
   VLAN Trunking Protocol <VTP>
   Traditional Spanning Tree Protocol <STP>
   Spanning Tree Configuration <STPCONFIG>
+  Advanced Spanning Tree Protocol <STPADV>
