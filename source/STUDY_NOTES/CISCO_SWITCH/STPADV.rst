@@ -225,7 +225,7 @@ MST Configuration
   interface <name>
     spanning-tree mst <instance> port-priority <number>
 
-** Set MST timers**
+**Set MST timers**
 
 ::
 
