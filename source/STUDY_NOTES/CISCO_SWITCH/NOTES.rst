@@ -20,3 +20,4 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH) - Study No
   Logging <LOGGING>
   SNMP <SNMP>
   IP SLA <IPSLA>
+  Port Mirroring <PORTMIRROR>
