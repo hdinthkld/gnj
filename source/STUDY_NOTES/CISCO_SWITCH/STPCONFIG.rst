@@ -24,7 +24,7 @@ Spanning-Tree Global Configuration
 
   [no] spanning-tree extend system-id
 
-**Manually set Bridge ID format**
+**Manually set Bridge ID Priority**
 
 *Note: Must be uset in increments of 4096
 
@@ -32,9 +32,9 @@ Spanning-Tree Global Configuration
 
   spanning-tree vlan <vlan-list> priority <value>
 
-**Automatically set primary/secondary root bridge with macro
+**Automatically set primary/secondary root bridge with macro**
 
-* Note: command will not show in the config directly
+*Note: command will not show in the config directly*
 
 ::
 
@@ -43,14 +43,14 @@ Spanning-Tree Global Configuration
 
 **Tuning Port ID/Priority**
 
-*Note: Port number is fixed, only priority can be changed
+*Note: Port number is fixed, only priority can be changed*
 
 ::
 
   interface <name>
     spanning-tree vlan <vlan-list> port-priority <value>
 
-** Tune global STP timers
+**Tune global STP timers**
 
 ::
 
@@ -100,7 +100,7 @@ PortFast
 
 **Automatically apply optimal configuration for an end user port**
 
-*Note: Enables PortFast, sets to be an access port, disables PAgP
+*Note: Enables PortFast, sets to be an access port, disables PAgP*
 
 ::
 
