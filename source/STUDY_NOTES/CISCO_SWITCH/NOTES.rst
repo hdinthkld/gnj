@@ -19,3 +19,4 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH) - Study No
   Configuring DHCP <DHCP>
   Logging <LOGGING>
   SNMP <SNMP>
+  IP SLA <IPSLA>
