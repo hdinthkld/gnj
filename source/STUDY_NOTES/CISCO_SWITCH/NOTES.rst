@@ -17,3 +17,4 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH) - Study No
   Aggregating Switch Links <AGGLINKS>
   Multilayer Switching <MLS>
   Configuring DHCP <DHCP>
+  Logging <LOGGING>
