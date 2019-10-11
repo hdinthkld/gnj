@@ -8,6 +8,7 @@ Ethernet Overview
 =================
 
 - Determining Bandwidth Requirements
+
   * Types of applications used
   * Traffic flow in use
   * Size of user community
@@ -42,6 +43,7 @@ Scaling Ethernet
   * Supported on STP up to 2M (1000Base-CX)
   * UTP Cat 5 upto 100M (1000Base-T)
   * Fibre Optic
+
     * 1000Base-SX MMF 62.5 (275M) or 50 (550M)
     * 1000Base-LX/LH MMF 62.5 (550M) or 50 (550M), SMF 9 (10KM)
     * 1000Base-ZX SMF 9 (70KM), 8 (100KM)
@@ -61,6 +63,7 @@ Scaling Ethernet
   * Copper: CX4  with Infiniband (15M)
 
   * Transceiver Types
+  
     * Wavelength - S = Short, L = Long, E = Extra Long
     * PHY Type - R = LAN PHY, W = WAN PHY
     * LX4/LW4 Long Wave length, X/W indicate the coding used, 4 is number of wavelengths
@@ -338,6 +341,7 @@ Configuring PoE
 **Configure Power offered on a port**
 
 ::
+
   power inline auto [max <milliwatts>]
   power inline static
   power inline never
