@@ -112,7 +112,7 @@ Configuring High Availability
 
 **Configure Suprvisor Synchronisation**
 
-*NOTE: By default startup and running configurations are sync'd
+*NOTE: By default startup and running configurations are sync'd*
 
 ::
 
