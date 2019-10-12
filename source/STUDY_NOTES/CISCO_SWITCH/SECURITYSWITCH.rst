@@ -165,9 +165,9 @@ Configuring Port Security
     shutdown
     no shutdown
 
-**Configure Learned MAC address ageing*
+**Configure Learned MAC address ageing**
 
-*NOTE: Disabled by default
+*NOTE: Disabled by default*
 
 ::
 
