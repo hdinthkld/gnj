@@ -103,7 +103,7 @@ Configuring VLAN Access Lists
 
   vlan filter <name> vlan-list <vlan-list>
 
-Configue Private VLANs
+Configure Private VLANs
 ======================
 
 **Create Secondary VLAN**
@@ -117,9 +117,9 @@ Configue Private VLANs
 
 ::
 
-vlan <id>
-  private-vlan primary
-  private-vlan association {<secondary-vlan-list> | add <vlan-list> | remove <vlan-list>}
+  vlan <id>
+    private-vlan primary
+    private-vlan association {<secondary-vlan-list> | add <vlan-list> | remove <vlan-list>}
 
 **Set the Interface Port Modes**
 
