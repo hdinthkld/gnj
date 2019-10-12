@@ -152,6 +152,7 @@ Active Virtual Forwarder (AVF)
 
 - Responsible for forwarding traffic received from clients
 - Virtual MAC prefix of 0007.B4xx.xxyy
+
   * xx.xx = 0 bits followed by 10 bit group ID
   * yy = 8-bit virtual forwarder number
 
