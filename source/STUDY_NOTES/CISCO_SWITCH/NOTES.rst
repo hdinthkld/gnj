@@ -22,3 +22,4 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH) - Study No
   IP SLA <IPSLA>
   Port Mirroring <PORTMIRROR>
   High Availability <HA>
+  Layer 3 High Availability <HALAYER3>
