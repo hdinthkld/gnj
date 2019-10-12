@@ -26,3 +26,4 @@ Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH) - Study No
   Securing Switch Access <SECURITYSWITCH>
   Securing VLANs <SECURITYVLANS>
   Preventing Snooping Attacks <SECURITYSNOOPING>
+  Managing Switch Users <SECURITYUSERS>
