@@ -25,6 +25,8 @@ Packet Forwarding Review
   with it's own MAC in the form of a proxy ARP
 - The gateway/IS/Router availability is critical for the network to function
 
+.. _switch_hal3_hsrp:
+
 Hot Standby Router Protocol (HSRP)
 ==================================
 
@@ -99,6 +101,7 @@ Load Balancing with HSRP
 - Each router is configured as the primary for it's own group and secondary for the peer routers group
 - Hosts must be configured to use the most approrpiate gateway either manually or via DHCP
 
+.. _switch_hal3_vrrp:
 
 Virtual Router Redundancy Protocol (VRRP)
 =========================================
@@ -115,6 +118,8 @@ Virtual Router Redundancy Protocol (VRRP)
 - Can use inteface tracking 
 - Multiple groups supported per VLAN for load balancing
 
+
+.. _switch_hal3_glbp:
 
 Gateway Load Balancing Protocol (GLBP)
 ======================================
@@ -183,7 +188,6 @@ GLBP Load Balancing
   * Round Robin (Default) - Even traffic load across all AVFs
   * Weighted - AVFs receive traffic based on configured weight values
   * Host Dependant - host is given consistent MAC every time
-
 
 HSRP configuration
 ==================

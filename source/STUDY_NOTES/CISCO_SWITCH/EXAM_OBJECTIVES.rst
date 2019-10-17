@@ -90,8 +90,8 @@ Cisco CCNP SWITCH - Exam Objectives
 
   3.1 Configure and verify first-hop redundancy protocols
 
-    3.1.a HSRP
+    3.1.a :ref:`HSRP <switch_hal3_hsrp>`
     
-    3.1.b VRRP
+    3.1.b :ref:`VRRP <switch_hal3_vrrp>`
     
-    3.1.c GLBP
+    3.1.c :ref:`GLBP <switch_hal3_glbp>`
