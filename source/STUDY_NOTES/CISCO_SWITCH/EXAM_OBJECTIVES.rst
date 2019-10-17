@@ -8,9 +8,9 @@ Cisco CCNP SWITCH - Exam Objectives
 
     1.1.a :ref:`SDM templates <switch_sdm>`
     
-    1.1.b Managing MAC address table
+    1.1.b :ref:`Managing MAC address table <switch_managing_tables>`
   
-    1.1.c Troubleshoot Err-disable recovery
+    1.1.c :ref:`Troubleshoot Err-disable recovery <switch_errdisable>`
   
   1.2 Configure and verify Layer 2 protocols
   

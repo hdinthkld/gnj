@@ -203,6 +203,8 @@ Ternary Content Addressable Memory (TCAM)
   
   show platform tcam utilisation
 
+.. _switch_managing_tables:
+
 Managing Switching Table Sizes
 ==============================
 
