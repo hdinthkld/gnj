@@ -2,6 +2,8 @@
 Cisco - Advanced Spanning Tree Protocol
 ***************************************
 
+.. _switch_stp_rstp:
+
 Rapid Spanning Tree Protocol (RSTP)
 ===================================
 
@@ -119,6 +121,8 @@ Rapid Spanning Tree Configuration
   show spanning-tree [vlan <id>]
 
 
+.. _switch_stp_mst:
+
 Multiple Spanning Tree (MST) Protocol
 =====================================
 
@@ -232,4 +236,4 @@ MST Configuration
   spanning-tree mst hello-time <seconds>
   spanning-tree mst forward-time <seconds>
   spanning-tree mst <max-age> <seconds>
-
+  

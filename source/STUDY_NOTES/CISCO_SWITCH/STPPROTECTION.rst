@@ -16,6 +16,9 @@ This technologies include:
 - Loop Guard
 - Uni-Directional Link Detection (UDLD)
 
+
+.. _switch_stp_rootguard:
+
 Root Guard
 ==========
 
@@ -34,6 +37,8 @@ Root Guard Configuration
 
   interface <name>
     spanning-tree guard root
+
+.. _switch_stp_bpduguard:
 
 BPDU Guard
 ==========
@@ -61,6 +66,8 @@ BPDU Guard Configuration
   interface <name>
   spanning-tree bpduguard {enable|disable}
 
+.. _switch_stp_bpdufilter:
+
 BPDU Filtering
 ==============
 
@@ -84,6 +91,8 @@ BPDU Filter Configuration
 
   interface <name>
   spanning-tree bpdufilter {enable|disable}
+
+.. _switch_stp_loopguard:
 
 Loop Guard
 ==========

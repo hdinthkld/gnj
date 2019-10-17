@@ -48,13 +48,13 @@ Cisco CCNP SWITCH - Exam Objectives
   
   1.6 Configure and verify spanning tree
     
-    1.6.a PVST+, RPVST+, MST
+    1.6.a :ref:`PVST+ <switch_stp_pvstplus>`, :ref:`RPVST+ <switch_stp_rstp>`, :ref:`MST <switch_stp_mst>`
     
-    1.6.b Switch priority, port priority, path cost, STP timers
+    1.6.b :ref:`Switch priority <switch_stp_priority>`, port priority, :ref:`path cost <switch_stp_pathcost>`, :ref:`STP timers <switch_stp_timers>`
     
-    1.6.c PortFast, BPDUguard, BPDUfilter
+    1.6.c :ref:`PortFast <switch_stp_portfast>`, :ref:`BPDUguard <switch_stp_bpduguard>`, :ref:`BPDUfilter <switch_stp_bpdufilter>`
     
-    1.6.d Loopguard and Rootguard
+    1.6.d :ref:`Loopguard <switch_stp_loopguard>` and :ref:`Rootguard <switch_stp_rootguard>`
 
   1.7 Configure and verify other LAN switching technologies
   

@@ -55,6 +55,8 @@ Bridge Protocol Data Units (BPDUS)
 Spanning Tree Election Process
 ==============================
 
+.. _switch_stp_priority:
+
 Root Bridge Election
 --------------------
 
@@ -76,6 +78,8 @@ Root Port Election
 - Initial root path cost in root bridge BPDU is 0 (zero)
 - Next switch adds path cost based on interface speed as BPDU is received
 - Switch updaed BPDU with root path cost before relaying it on
+
+.. _switch_stp_pathcost:
 
 **Cisco Path Cost Values**
 
@@ -147,6 +151,9 @@ Manually calculating STP topology
 - Select Root Ports (1 per switch)
 - Select Designated Ports (1 per segment)
 - Identify Blocking Ports
+
+
+.. _switch_stp_timers:
 
 STP Timers
 ==========
@@ -242,6 +249,8 @@ Per-VLAN Spanning Tree (PVST)
 - Requires use of ISL trunk encapsulation
 - Interoperability issues with CST
 
+.. _switch_stp_pvstplus:
+
 Per-VLAN Spanning Tree (PVST+)
 ----------------------------------
 
@@ -258,6 +267,8 @@ Cisco provides additional means in order to reduce the time taken to establish a
 - UplinkFast (Access Layer Uplinks)
 - BackboneFast (Redudant Backbond links
 
+.. _switch_stp_portfast:
+
 PortFast
 --------
 
@@ -268,6 +279,8 @@ PortFast
 - Can be enable globally for non-trunking links or manually per port
 - TCN BPDUs not sent when link goes down
 - Port looses PortFast status if BPDU is seen on the port
+
+.. _switch_stp_uplinkfast:
 
 UplinkFast
 ----------
@@ -280,6 +293,8 @@ UplinkFast
 - If enabled, bridge priority changed to 491522 and port cost increased to 3000
 - When failure detected, dummy multicast frames are sent for all stations in the CAM table so that other
   switches learn the new path as quickly as possible.
+
+.. _switch_stp_backbonefast:
 
 BackboneFast
 ------------
