@@ -41,7 +41,7 @@ VLAN Membership
   * Greater administrative overhead
 
 
-.. _switch_vlan_config
+.. _switch_vlan_config:
 
 Static VLAN configuration
 -------------------------
@@ -97,7 +97,7 @@ Local VLANS
 - Maximum Availability and scaleability with redudant paths
 - Small Failure Domain
 
-.. _switch_vlan_trunk
+.. _switch_vlan_trunk:
 
 VLAN Trunks
 ===========
@@ -131,7 +131,8 @@ Inter-Switch Link Protocol (ISL)
 - Only supported on higher end Cisco devices
 
 
-.. _switch_vlan_802.1q
+.. _switch_vlan_802.1q:
+
 IEEE 802.1Q Protocol
 --------------------
 
@@ -167,7 +168,7 @@ Trunking modes
 - Dynamic Desirable - Port actively tries to establish trunk with connected device
 - Dynamic Auto - Port can form a trunk but only if far end requests it
 
-.. _switch_vlan_voice
+.. _switch_vlan_voice:
 
 Voice VLANs
 ===========
@@ -233,7 +234,7 @@ VLAN Configuration Commands
 
   show vlan [<id>] [brief]
 
-.. _switch_vlan_trunk_config
+.. _switch_vlan_trunk_config:
 
 **Configure a VLAN trunk**
 

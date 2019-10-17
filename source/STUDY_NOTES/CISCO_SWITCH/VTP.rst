@@ -15,7 +15,7 @@ VLAN Trunking Protocol (VTP) Overview
 - By default switches will not have any domain name set, known as the "Null" domain
 - Any switch that hears a summary advertisement sent non-securely will configure itself with the contained information.
 
-.. _switch_vtp_versions
+.. _switch_vtp_versions:
 
 VTP Versions
 ============

@@ -38,13 +38,13 @@ Cisco CCNP SWITCH - Exam Objectives
   
   1.5 Configure and verify EtherChannels
     
-    1.5.a LACP, PAgP, manual
+    1.5.a :ref:`LACP <switch_etherchannel_lacp>`, :ref:`PAgP <switch_etherchannel_pagp>`, manual
     
-    1.5.b Layer 2, Layer 3
+    1.5.b :ref:`Layer 2, Layer 3 <switch_aggregation_overview>`
     
-    1.5.c Load balancing
+    1.5.c :ref:`Load balancing <switch_aggregation_lb>`
     
-    1.5.d EtherChannel misconfiguration guard
+    1.5.d :ref:`EtherChannel misconfiguration guard <switch_aggregation_guard>`
   
   1.6 Configure and verify spanning tree
     

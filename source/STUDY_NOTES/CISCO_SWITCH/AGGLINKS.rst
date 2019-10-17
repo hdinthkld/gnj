@@ -2,6 +2,8 @@
 Cisco - Aggregating Switch Links
 ********************************
 
+.. _switch_aggregation_overview:
+
 Switch Port Aggregation with Ether Channels
 ===========================================
 
@@ -23,6 +25,9 @@ Switch Port Aggregation with Ether Channels
 - Higher end switches that support Virtual Switching System (VSS) can form the EtherChannel across 
   the switch chassis's into a Multi-Chassis EtherChannel (MEC)
 - All interfaces that are combined into a single EtherChannel must have identical settings
+- Etherchannel can be used on both Switched (Layer 2) and  Routed (Layer 3) ports
+
+.. _switch_aggregation_lb:
 
 Distributing Traffic In An EtherChannel
 =======================================
@@ -63,6 +68,8 @@ EtherChannel Negotiation Protocols
 - Configure the negotion mode to "on" to not use negotiation
 
 
+.. _switch_etherchannel_pagp:
+
 Port Aggregation Protocol (PAgP)
 --------------------------------
 
@@ -73,6 +80,8 @@ Port Aggregation Protocol (PAgP)
 
   * Desirable - Actively try to establsh an EtherChannel
   * Auto - Form an EtherChannel but only if requested to do so
+
+.. _switch_etherchannel_lacp:
 
 Link Aggregation Control Protocol (LACP)
 ----------------------------------------
@@ -86,6 +95,9 @@ Link Aggregation Control Protocol (LACP)
 
   * Active - Try to establish EtherChannel with neighbour switch
   * Passive - Wait for neighbour switch to request negotiation of EtherChannel
+
+
+.. _switch_aggregation_guard:
 
 Avoiding Misconfiguration with EtherChannel Guard
 =================================================
