@@ -16,6 +16,8 @@ VLAN Access Lists (VACLs)
 - Packets are filtered in hardware
 - The "Redirect" action causes traffic to be forwarded onto a specified interface
 
+.. _switch_vlan_private:
+
 Private VLANs
 =============
 

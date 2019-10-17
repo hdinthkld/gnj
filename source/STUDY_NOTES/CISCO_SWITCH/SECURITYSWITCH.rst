@@ -2,6 +2,8 @@
 Cisco - Securing Switch Acccess
 *******************************
 
+.. _switch_portsecurity:
+
 Port Security
 =============
 
@@ -61,6 +63,8 @@ Configuration Steps
 - Define Authentication Methods for 802.1x
 - Enable 802.1x globally on the switch 
 - Configure individual ports to use 802.1x authentication by changing them from "Force Authorised" to "Auto"
+
+.. _switch_stormcontrol:
 
 Using Storm Control
 ===================

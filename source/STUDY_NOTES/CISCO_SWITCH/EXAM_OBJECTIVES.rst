@@ -68,23 +68,23 @@ Cisco CCNP SWITCH - Exam Objectives
   
   2.1 Configure and verify switch security features
     
-    2.1.a DHCP snooping
+    2.1.a :ref:`DHCP snooping <switch_snooping_dhcp>`
     
-    2.1.b IP Source Guard
+    2.1.b :ref:`IP Source Guard <switch_ipsourceguard>`
 
-    2.1.c Dynamic ARP inspection
+    2.1.c :ref:`Dynamic ARP inspection <switch_dai>`
 
-    2.1.d Port security
+    2.1.d :ref:`Port security <switch_portsecurity>`
 
-    2.1.e Private VLAN
+    2.1.e :ref:`Private VLAN <switch_vlan_private>`
 
-    2.1.f Storm control
+    2.1.f :ref:`Storm control <switch_stormcontrol>`
 
   2.2 Describe device security using Cisco IOS AAA with TACACS+ and RADIUS
     
-    2.2.a AAA with TACACS+ and RADIUS
+    2.2.a :ref:`AAA <switch_aaa>` with :ref:`TACACS+  <switch_aaa_tacacs>`and :ref:`RADIUS  <switch_aaa_radius>`
     
-    2.2.b Local privilege authorization fallback
+    2.2.b :ref:`Local privilege authorization fallback <switch_aaa_methods>`
 
 3.0 Infrastructure Services (15%)
 

@@ -2,6 +2,8 @@
 Cisco - Preventing Snooping Attacks
 ***********************************
 
+.. _switch_snooping_dhcp:
+
 DHCP Snooping
 =============
 
@@ -16,6 +18,8 @@ DHCP Snooping
   - Define Trusted Ports
   - Enable DHCP Snooping
   - Define What VLANs to enable DHCP snooping on
+
+.. _switch_snooping_ipsourceguard:
 
 IP Source Guard
 ===============
@@ -36,6 +40,8 @@ IP Source Guard
   * Enable Port Security (if detecting MAC Spoofing is required)
   * Configure Static Entries for non-DHCP hosts
   * Enable Source Guard (Per Interface)
+
+.. _switch_snooping_dai:
 
 Dynamic ARP Inspection (DAI)
 ============================

@@ -2,6 +2,8 @@
 Cisco - Managing Switch Users
 *****************************
 
+.. _switch_aaa:
+
 AAA Overview
 ============
 
@@ -28,11 +30,15 @@ Centralised Authentication
   * Identity Service Engine (ISE)
   * Secure Access Control Server (ACS)
 
+.. _switch_aaa_tacacs:
+
 Terminal Access Controller Access Control System (TACACS+)
 ----------------------------------------------------------
 
 - Cisco Proprietary
 - Uses TCP Port 49 for secure/encrypted communication
+
+.. _switch_aaa_radius:
 
 Remote Access Dial-In User Service (RADIUS)
 -------------------------------------------
@@ -40,6 +46,8 @@ Remote Access Dial-In User Service (RADIUS)
 - Standards Based
 - Uses UDP Ports 1812 (Authentication) and 1813 (Accounting)
 - Not all traffic is encrypted
+
+.. _switch_aaa_methods:
 
 Method Lists
 ============
