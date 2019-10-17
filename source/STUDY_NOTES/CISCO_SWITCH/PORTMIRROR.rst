@@ -69,7 +69,7 @@ Remote Span
 Remote SPAN Configuration
 -------------------------
 
-**Create RPAN VLAN on all potential switches in the path**
+**Create RSPAN VLAN on all potential switches in the path**
 
 ::
 
