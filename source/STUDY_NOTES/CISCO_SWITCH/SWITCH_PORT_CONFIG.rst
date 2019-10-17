@@ -153,7 +153,7 @@ Configuring Switch ports
   interface <name>
    duplex {auto|full|half}
 
-.. _switch_errdisable
+.. _switch_errdisable:
 
 Managing Error Conditions On Switch Ports
 =========================================
