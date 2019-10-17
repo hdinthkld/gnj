@@ -20,11 +20,11 @@ Cisco CCNP SWITCH - Exam Objectives
   
   1.3 Configure and verify VLANs
   
-    1.3.a Access ports
+    1.3.a :ref:`Access ports <switch_vlan_config>`
     
     1.3.b VLAN database
     
-    1.3.c Normal, extended VLAN, voice VLAN
+    1.3.c :ref:`Normal, extended VLAN <switch_vlan_config>`, :ref:`voice VLAN <switch_vlan_voice>`
   
   1.4 Configure and verify trunking
     

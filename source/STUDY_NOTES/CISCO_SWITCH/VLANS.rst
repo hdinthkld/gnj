@@ -40,6 +40,9 @@ VLAN Membership
   * Flexibiliy and Mobility
   * Greater administrative overhead
 
+
+.. _switch_vlan_config
+
 Static VLAN configuration
 -------------------------
 
@@ -159,6 +162,8 @@ Trunking modes
 - Trunk - Port is permenantly trunking however DTP is stil operational
 - Dynamic Desirable - Port actively tries to establish trunk with connected device
 - Dynamic Auto - Port can form a trunk but only if far end requests it
+
+.. _switch_vlan_voice
 
 Voice VLANs
 ===========
