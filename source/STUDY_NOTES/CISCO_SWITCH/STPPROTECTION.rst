@@ -112,6 +112,7 @@ Loop Guard Configuration
   interface <name>
     [no] spanning-tree guard loop
 
+.. _switch_udld
 
 Uni-Directional Link Detection (UDLD)
 =====================================

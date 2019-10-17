@@ -14,9 +14,9 @@ Cisco CCNP SWITCH - Exam Objectives
   
   1.2 Configure and verify Layer 2 protocols
   
-    1.2.a CDP, LLDP
+    1.2.a :ref:`CDP <switch_cdp>`, :ref:`LLDP <switch_lldp>`
     
-    1.2.b UDLD
+    1.2.b :ref:`UDLD <switch_udld>`
   
   1.3 Configure and verify VLANs
   

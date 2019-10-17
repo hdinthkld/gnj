@@ -217,6 +217,9 @@ Checking for speed/duplex mismatches
 Discovering Connected Devices
 =============================
 
+
+.. _switch_cdp
+
 Cisco Discovery Protocol
 ------------------------
 
@@ -262,6 +265,8 @@ Cisco Discovery Protocol
 
   show cdp entry <name>
 
+
+.. _switch_lldp
 
 Link Layer Discovery Protocol
 -----------------------------
