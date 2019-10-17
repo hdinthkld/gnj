@@ -19,7 +19,7 @@ DHCP Snooping
   - Enable DHCP Snooping
   - Define What VLANs to enable DHCP snooping on
 
-.. _switch_snooping_ipsourceguard:
+.. _switch_ipsourceguard:
 
 IP Source Guard
 ===============
@@ -41,7 +41,7 @@ IP Source Guard
   * Configure Static Entries for non-DHCP hosts
   * Enable Source Guard (Per Interface)
 
-.. _switch_snooping_dai:
+.. _switch_dai:
 
 Dynamic ARP Inspection (DAI)
 ============================

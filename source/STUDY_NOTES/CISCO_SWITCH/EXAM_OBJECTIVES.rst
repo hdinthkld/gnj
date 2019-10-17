@@ -82,7 +82,7 @@ Cisco CCNP SWITCH - Exam Objectives
 
   2.2 Describe device security using Cisco IOS AAA with TACACS+ and RADIUS
     
-    2.2.a :ref:`AAA <switch_aaa>` with :ref:`TACACS+  <switch_aaa_tacacs>`and :ref:`RADIUS  <switch_aaa_radius>`
+    2.2.a :ref:`AAA <switch_aaa>` with :ref:`TACACS+ <switch_aaa_tacacs>` and :ref:`RADIUS <switch_aaa_radius>`
     
     2.2.b :ref:`Local privilege authorization fallback <switch_aaa_methods>`
 
