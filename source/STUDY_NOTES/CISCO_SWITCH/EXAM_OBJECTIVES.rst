@@ -6,7 +6,7 @@ Cisco CCNP SWITCH - Exam Objectives
 
   1.1 Configure and verify switch administration
 
-    1.1.a SDM templates
+    1.1.a :ref:`SDM templates <switch_sdm>`
     
     1.1.b Managing MAC address table
   

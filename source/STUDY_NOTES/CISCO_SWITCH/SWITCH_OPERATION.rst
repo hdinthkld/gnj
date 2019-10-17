@@ -213,6 +213,8 @@ Managing Switching Table Sizes
   * Switches running at Layer 2 should have a larger CAM table
   * Switches running at Layer 3 should have a larger FIB table
 
+.. _switch_sdm:
+
 - The switching database manager (SDM) managed how the switches memory is partitioned and these are defined as templates
 
   * Desktop (Default, Access, VLAN, Routing)
