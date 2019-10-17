@@ -14,6 +14,7 @@ Leveraging Logical Switches
   * StackWise
   * Virtual Switching System (VSS)
 
+.. _switch_stackwise:
 
 StackWise
 ---------

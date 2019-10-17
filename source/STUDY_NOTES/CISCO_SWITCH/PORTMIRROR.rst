@@ -15,6 +15,8 @@ SPAN Types
 - Local Span - Both Source and Destination ports on the same switch
 - Remote Span - Source and Destination ports on different switches
 
+.. _switch_span_local:
+
 Local SPAN
 ==========
 
@@ -50,6 +52,8 @@ Local SPAN Configuration
 ::
 
   monitor session <number> filter vlan <vlan-range>
+
+.. _switch_span_remote:
 
 Remote Span
 ===========

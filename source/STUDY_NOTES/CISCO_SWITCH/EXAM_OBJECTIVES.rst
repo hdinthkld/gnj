@@ -58,11 +58,11 @@ Cisco CCNP SWITCH - Exam Objectives
 
   1.7 Configure and verify other LAN switching technologies
   
-    1.7.a SPAN, RSPAN
+    1.7.a :ref:`SPAN <switch_span_local>`, :ref:`RSPAN <switch_span_remote>`
   
   1.8 Describe chassis virtualization and aggregation technologies
   
-    1.8.a Stackwise
+    1.8.a :ref:`Stackwise <switch_stackwise>`
 
 2.0 Infrastructure Security (20%)
   
