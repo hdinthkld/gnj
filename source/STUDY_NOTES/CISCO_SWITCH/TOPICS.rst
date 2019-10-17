@@ -1,5 +1,5 @@
 #########################################################################
-Cisco CCNP - Implementing Cisco IP Switched Networks (300-215 SWITCH)
+Cisco CCNP - Implementing Cisco IP Switched Networks (300-115 SWITCH)
 #########################################################################
 
 .. toctree::
