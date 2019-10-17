@@ -28,13 +28,13 @@ Cisco CCNP SWITCH - Exam Objectives
   
   1.4 Configure and verify trunking
     
-    1.4.a VTPv1, VTPv2, VTPv3, VTP pruning
+    1.4.a :ref:`VTPv1, VTPv2, VTPv3 <switch_vtp_versions>`, :ref:`VTP pruning <switch_vtp_pruning>`
   
-    1.4.b dot1Q
+    1.4.b :ref:`dot1Q <switch_vlan_802.1q>`
   
-    1.4.c Native VLAN
+    1.4.c :ref:`Native VLAN <switch_vlan_802.1q>`
   
-    1.4.d Manual pruning
+    1.4.d :ref:`Manual pruning <switch_vlan_trunk_config>`
   
   1.5 Configure and verify EtherChannels
     

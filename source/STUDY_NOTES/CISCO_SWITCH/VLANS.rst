@@ -97,6 +97,8 @@ Local VLANS
 - Maximum Availability and scaleability with redudant paths
 - Small Failure Domain
 
+.. _switch_vlan_trunk
+
 VLAN Trunks
 ===========
 
@@ -128,6 +130,8 @@ Inter-Switch Link Protocol (ISL)
 
 - Only supported on higher end Cisco devices
 
+
+.. _switch_vlan_802.1q
 IEEE 802.1Q Protocol
 --------------------
 
@@ -228,6 +232,8 @@ VLAN Configuration Commands
 ::
 
   show vlan [<id>] [brief]
+
+.. _switch_vlan_trunk_config
 
 **Configure a VLAN trunk**
 
