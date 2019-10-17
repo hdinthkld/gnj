@@ -129,7 +129,7 @@ VTP Synchronisation
   This can cause even "server" switches to replace their information
 - As "end-to-end" VLANs are now considered a legacy design model, Cisco recommends all switches be set to either "off" or "transparent"
 
-.. _switch_vtp_pruning
+.. _switch_vtp_pruning:
 
 VTP Pruning
 ===========
