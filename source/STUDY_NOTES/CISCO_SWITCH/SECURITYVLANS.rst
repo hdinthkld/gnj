@@ -6,13 +6,13 @@ VLAN Access Lists (VACLs)
 =========================
 
 - Normal router access lists (RACLs) only filter traffic between VLANs
-- VACLS filer traffic that stays within a VLAN
+- VACLs filter traffic that stays within a VLAN
 - VACLs are merged into the TCAM
-- Support Additional "Redirect" action
+- Support additional "Redirect" action
 - Configured globally for the VLAN not per interface
 - Evaluated in sequence
 - Can match IP addresses as well as MAC addresses however they need to be in different ACLs
-- Action and Match is performed as frammes within a VLAN or routed in/out of a VLAN
+- Action and Match is performed as frames within a VLAN or routed in/out of a VLAN
 - Packets are filtered in hardware
 - The "Redirect" action causes traffic to be forwarded onto a specified interface
 
@@ -56,7 +56,59 @@ Configuration Steps
 - Set the secondary VLAN mode per interface
 - Associate host ports with primary and secondary vlan
 - Associate promiscuous ports with the primary and one or more secondary VLANs
-- MAP SVI interfaces to Secondary VLANs
+- Map SVI interfaces to Secondary VLANs
+
+Example Configuration
+---------------------
+
+In this example we will configure a port which is connected to a single router that will serve 
+as the gateway for both a community and isolated VLAN:
+
+**Step 1: Create the Secondary VLANs**
+
+::
+
+  ! Hosts that only need to communicate with the router
+  vlan 100
+    name PV-GUESTS
+    private-vlan isolated
+
+  ! Hosts that need to talk amongst themselves and to the the router
+  vlan 200
+    name PV-HOSTS
+    private-vlan community
+
+**Step 2: Create the Primary VLAN**
+
+::
+
+  vlan 10
+    name PV-GATEWAY
+    private-vlan primary
+    private-vlan association 100,200
+
+**Step 3: Configure the port connected to the router (Primary VLAN)**
+
+::
+
+  interface FastEthernet0/1
+    switchport mode private-vlan promiscuous
+    switchport private-vlan mapping 10 100,200
+
+**Step 4: Configure the host ports and associate with the primary VLAN**
+
+::
+
+  ! For the isolated hosts
+  interface FastEthernet0/2
+    switchport mode private-vlan host
+    switcport private-vlan host-association 10 100
+
+  ! For the community hosts
+  interface range FastEthernet0/3-5
+    switchport mode private-vlan host
+    switchport private-vlan host-association 10 200
+
 
 Securing VLAN Trunks
 ====================
@@ -132,13 +184,16 @@ Configure Private VLANs
 
 **Associate Host Port With Primary And Secondary VLAN**
 
+*NOTE: Host ports can only be associated with one primary and one secondary VLAN*
+
 ::
 
   interface <name>
-    switchport private-vlan host association <primary> <secondary>
+    switchport private-vlan host-association <primary> <secondary>
 
 **Associate Promiscuous Ports with Primary and one or more Secondary VLANs**
 
+*NOTE: A promiscuous port belongs to one primary VLAN but can be mapped to more than one secondary VLAN*
 ::
 
   interface <name>
@@ -146,10 +201,19 @@ Configure Private VLANs
 
 **Associate Layer 3 SVI with one or more secondary VLANs**
 
+*NOTE: Only create for "Primary" VLANs, any SVIs for a secondary VLAN will be shutdown*
 ::
 
   interface vlan<id>
-    private-vlan mappiing {<vlan-id>|add <vlan-list>|remove <vlan-list>}
+    private-vlan mapping {<vlan-id>|add <vlan-list>|remove <vlan-list>}
+
+**Verify Private VLANs**
+
+::
+
+  show vlan private-vlan
+  show interface switchport
+  show interface private-vlan mapping
 
 Vlan Trunk Secure Configuration
 ===============================
